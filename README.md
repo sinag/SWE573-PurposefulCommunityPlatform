@@ -1,7 +1,7 @@
-# SWE-573 Social Community
+# SWE-573 Purposefull Community Platform
 This repository is created for the lecture "SWE573 - Software Development Practice" @ Boğaziçi University Software Engineering Department for fall 2019 semester.
 
-This project is about a sample "Social Community" where registered members submit content to the site such as links, text posts, images and etc, on moderated topics. 
+This project is about a Purposefull Community Platform where registered members submit content to the site such as links, text posts, images and etc, on moderated topics. 
 
 Topics are created by community builders who are able to define the community specific datatypes. 
 
