@@ -1,0 +1,29 @@
+# Create database
+CREATE DATABASE pcp;
+CREATE USER django WITH PASSWORD 'django';
+ALTER ROLE django SET client_encoding TO 'utf8';
+ALTER ROLE django SET default_transaction_isolation TO 'read committed';
+ALTER ROLE django SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE pcp TO django;
+alter user django CREATEDB;
+
+# query database
+psql -U postgres
+\c pcp
+\dt
+select * from table_name;
+
+#setup test environment
+>>> from django.test.utils import setup_test_environment
+>>> setup_test_environment()
+
+# postgre default admin
+psql -U postgres
+password=P@ssw0rd1
+
+# migrations
+makemigrations
+migrate
+
+# create admin user
+python manage.py createsuperuser
