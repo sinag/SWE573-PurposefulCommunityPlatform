@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
+    path('communities/', include('community.urls')),
     path('polls/', include('polls.urls')),
     path('users/', include('users.urls')),
     path('admin/', admin.site.urls),

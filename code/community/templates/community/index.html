@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if top_communities %}
+        <ul class="list-group">
+            {% for community in top_communities %}
+                <li class="list-group-item"><a
+                        href="{% url 'community:detail' community.id %}">{{ community.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No community available.</p>
+    {% endif %}
+{% endblock %}
