@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static '../static/base.css' %}">
+    {% if "/users/login/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/login.js' %}"></script>{% endif %}
+    {% if "/users/password_reset/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/password_reset.js' %}"></script>{% endif %}
+    {% if "/users/reset/Nw/set-password/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/confirm_password_reset.js' %}"></script>{% endif %}
+    {% if "/users/signup/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/signup.js' %}"></script>{% endif %}
     <title>Purposeful Community Platform</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<a class="navbar-brand" href="#"><i class="fa fa-users"></i> Purposeful Community Platform</a>
+    <a class="navbar-brand" href="#"><i class="fa fa-users"></i> Purposeful Community Platform</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,7 +29,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item{% if "/" == request.path %} active{% endif %}">
-                <a class="nav-link" href="{% url 'home' %}">Home {% if "/" == request.path %}<span class="sr-only">(current)</span>{% endif %}</a>
+                <a class="nav-link" href="{% url 'home' %}">Home {% if "/" == request.path %}
+                    <span class="sr-only">(current)</span>{% endif %}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Communities</a>
@@ -36,7 +45,7 @@
         <ul class="nav navbar-nav ml-auto">
             {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="fas fa-user"></span> {{ user.username }}
+                    <a class="nav-link" href="#"><span class="fas fa-user"></span> Welcome {{ user.username }}
                     </a>
                 </li>
                 <li class="nav-item">
