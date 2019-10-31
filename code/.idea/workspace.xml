@@ -3,7 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sent_emails/20191027-163004-75113328.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sent_emails/20191027-163221-75352816.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sent_emails/20191027-165818-82409072.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sent_emails/20191027-170452-92973712.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sent_emails/20191031-124218-89794000.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sent_emails/20191031-140727-77144528.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
     </list>
@@ -118,7 +130,7 @@
       <workItem from="1572191013895" duration="640000" />
       <workItem from="1572195292625" duration="6913000" />
       <workItem from="1572450665580" duration="11002000" />
-      <workItem from="1572513231633" duration="7913000" />
+      <workItem from="1572513231633" duration="15850000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>
@@ -155,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572520944735</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="small fixes">
+      <created>1572521256650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572521256650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +200,7 @@
     <MESSAGE value="customized login and password reset form partially" />
     <MESSAGE value="bootstrap styling and validation added to user forms" />
     <MESSAGE value="background added and navbar menu fixed for profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="background added and navbar menu fixed for profile" />
+    <MESSAGE value="small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
   </component>
 </project>

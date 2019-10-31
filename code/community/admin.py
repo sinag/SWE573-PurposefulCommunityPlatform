@@ -4,7 +4,7 @@ from .models import Community
 
 class CommunityAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None, {'fields': ['name', 'post_count']}),
+        (None, {'fields': ['name', 'description', 'post_count']}),
         ('Date information', {'fields': ['created_on'], 'classes': ['collapse']}),
     ]
     list_display = ('name', 'created_on', 'post_count')

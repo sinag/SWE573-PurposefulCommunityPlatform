@@ -1,13 +1,58 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% if top_communities %}
-        <ul class="list-group">
-            {% for community in top_communities %}
-                <li class="list-group-item"><a
-                        href="{% url 'community:detail' community.id %}">{{ community.name }}</a></li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No community available.</p>
-    {% endif %}
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+<p class="text-muted">
+  Top 5 Communities
+</p>
+            {% if top_communities %}
+                {% for community in top_communities %}
+                    <div class="card shadow-lg mb-3">
+                        <div class="card text-center">
+                            <div class="card-header text-white bg-secondary">
+                                Created by Admin @ {{ community.created_on }}
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ community.name }}</h5>
+                                <p class="card-text">{{ community.description }}</p>
+                                <a href="{% url 'community:detail' community.id %}"
+                                   class="btn btn-primary"><span
+                                        class="fas fa-search"></span></a>
+                                {% if user.is_authenticated %}
+                                    <a href="#" class="btn btn-primary"><span
+                                            class="fas fa-user-plus"></span></a>
+                                    <a href="#" class="btn btn-primary"><span class="fas fa-user-minus"></span></a>
+                                {% endif %}
+                            </div>
+                            <div class="card-footer text-muted">
+                                <div style="display: flex; justify-content: space-around">
+                                    <div>12 Users</div>
+                                    <div>Root Channel</div>
+                                    <div>1234 Posts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="card border-primary mb-3">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Oops, no community found!
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is nothing here</h5>
+                            <p class="card-text">Click plus icon below to create a new community</p>
+                            <a href="#" class="btn btn-primary"><span class="fas fa-plus"></span></a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Just now
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
 {% endblock %}
