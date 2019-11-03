@@ -29,7 +29,6 @@ ALLOWED_HOSTS = ['pcp-env.mvkkwvkkha.us-east-1.elasticbeanstalk.com', '127.0.0.1
 # Application definition
 
 INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
     'users.apps.UsersConfig',
     'community.apps.CommunityConfig',
     'django.contrib.admin',

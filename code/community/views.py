@@ -1,6 +1,6 @@
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views import generic
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from .models import Community
 
 
@@ -23,6 +23,18 @@ class CreateView(CreateView):
 
     def get_success_url(self):
         return reverse('community:index')
+
+
+class DeleteView(DeleteView):
+    model = Community
+    template_name = 'community/delete.html'
+    success_url = reverse_lazy('community:index')
+
+    def get_queryset(self):
+        """
+        Get community details to delete
+        """
+        return Community.objects.filter(id=self.kwargs.get('pk'))
 
 
 class DetailView(generic.DetailView):

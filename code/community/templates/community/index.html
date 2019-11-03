@@ -23,6 +23,8 @@
                                     <a href="#" class="btn btn-primary"><span
                                             class="fas fa-user-plus"></span></a>
                                     <a href="#" class="btn btn-primary"><span class="fas fa-user-minus"></span></a>
+                                    <a href="{% url 'community:delete' community.id %}" class="btn btn-primary"><span class="fas fa-trash-alt"></span></a>
+{#                                    ToDo can only delete own communities#}
                                 {% endif %}
                             </div>
                             <div class="card-footer text-muted">
