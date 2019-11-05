@@ -19,6 +19,8 @@
         <script type="text/javascript" src="{% static '../static/signup.js' %}"></script>{% endif %}
     {% if "/communities/create" == request.path %}
         <script type="text/javascript" src="{% static '../static/create_community.js' %}"></script>{% endif %}
+    {% if "/communities/update" in request.path %}
+        <script type="text/javascript" src="{% static '../static/update_community.js' %}"></script>{% endif %}
     <title>Purposeful Community Platform</title>
 </head>
 <body>
