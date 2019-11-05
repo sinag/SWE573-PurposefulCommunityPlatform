@@ -73,6 +73,7 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 if 'RDS_HOSTNAME' in os.environ:
+    DEFAULT_ADMIN = 2
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
@@ -84,6 +85,7 @@ if 'RDS_HOSTNAME' in os.environ:
         }
     }
 else:
+    DEFAULT_ADMIN = 7
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',

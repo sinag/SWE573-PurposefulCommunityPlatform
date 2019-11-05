@@ -3,15 +3,15 @@
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
-<p class="text-muted">
-  Top 5 Communities
-</p>
+            <p class="text-muted">
+                Top 5 Communities
+            </p>
             {% if top_communities %}
                 {% for community in top_communities %}
                     <div class="card shadow-lg mb-3">
                         <div class="card text-center">
                             <div class="card-header text-white bg-secondary">
-                                Created by Admin @ {{ community.created_on }}
+                                Created by {{ community.author.username }} @ {{ community.created_on }}
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">{{ community.name }}</h5>
@@ -23,16 +23,19 @@
                                     <a href="#" class="btn btn-primary"><span
                                             class="fas fa-user-plus"></span></a>
                                     <a href="#" class="btn btn-primary"><span class="fas fa-user-minus"></span></a>
-                                    <a href="{% url 'community:update' community.id %}" class="btn btn-primary"><span class="fas fa-edit"></span></a>
-                                    <a href="{% url 'community:delete' community.id %}" class="btn btn-primary"><span class="fas fa-trash-alt"></span></a>
-{#                                    ToDo can only delete own communities#}
+                                    {% if community.author == request.user %}
+                                        <a href="{% url 'community:update' community.id %}"
+                                           class="btn btn-primary"><span class="fas fa-edit"></span></a>
+                                        <a href="{% url 'community:delete' community.id %}"
+                                           class="btn btn-primary"><span class="fas fa-trash-alt"></span></a>
+                                    {% endif %}
                                 {% endif %}
                             </div>
                             <div class="card-footer text-muted">
                                 <div style="display: flex; justify-content: space-around">
-                                    <div>12 Users</div>
+                                    <div>0 Members</div>
                                     <div>Root Channel</div>
-                                    <div>1234 Posts</div>
+                                    <div>0 Posts</div>
                                 </div>
                             </div>
                         </div>

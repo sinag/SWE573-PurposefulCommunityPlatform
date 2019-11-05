@@ -1,7 +1,11 @@
+from django.contrib.auth.models import User
 from django.db import models
+
+from root import settings
 
 
 class Community(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=settings.DEFAULT_ADMIN)
     name = models.CharField(max_length=100)
     created_on = models.DateTimeField(auto_now_add=True, blank=False)
     description = models.CharField(max_length=500, blank=False)

@@ -17,9 +17,12 @@ class IndexView(generic.ListView):
 
 class CreateView(CreateView):
     model = Community
-    # fields = ['name']
-    fields = "__all__"
+    fields = ['name', 'description', 'post_count']
     template_name = 'community/create.html'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('community:index')
@@ -27,7 +30,7 @@ class CreateView(CreateView):
 
 class UpdateView(UpdateView):
     model = Community
-    fields = "__all__"
+    fields = ['name', 'description', 'post_count']
     template_name = 'community/update.html'
 
     def get_success_url(self):

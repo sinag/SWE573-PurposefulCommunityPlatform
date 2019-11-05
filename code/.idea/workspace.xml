@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="create fommunity form added">
-      <change afterPath="$PROJECT_DIR$/community/templates/community/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/update_community.js" afterDir="false" />
+    <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/community/migrations/0003_community_author.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/migrations/0004_auto_20191105_1134.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/migrations/0005_auto_20191105_1142.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community/templates/community/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/root/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +134,7 @@
       <workItem from="1572721726126" duration="190000" />
       <workItem from="1572722002309" duration="4857000" />
       <workItem from="1572766794146" duration="7186000" />
-      <workItem from="1572936239450" duration="3134000" />
+      <workItem from="1572936239450" duration="7826000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>
@@ -199,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572770062186</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update community form added">
+      <created>1572939678513</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572939678513</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +236,7 @@
     <MESSAGE value="better theming" />
     <MESSAGE value="aws deployment changes" />
     <MESSAGE value="create fommunity form added" />
-    <option name="LAST_COMMIT_MESSAGE" value="create fommunity form added" />
+    <MESSAGE value="update community form added" />
+    <option name="LAST_COMMIT_MESSAGE" value="update community form added" />
   </component>
 </project>
