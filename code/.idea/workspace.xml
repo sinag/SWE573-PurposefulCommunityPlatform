@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="" />
+    <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/community/migrations/0006_subscription.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/migrations/0007_delete_subscription.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/templatetags/community_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sent_emails/20191105-122034-84796496.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/migrations/0002_auto_20191106_1128.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/migrations/0003_auto_20191106_1130.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/templates/subscription/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/templates/subscription/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscription/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/root/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/root/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +46,8 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -32,25 +62,26 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/community/templatetags" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templates\community" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\templates\static\templates" />
-      <recent name="C:\Users\ygulsen\PycharmProjects\mysite" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templates\community" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\templates" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -123,7 +154,9 @@
       <workItem from="1572721726126" duration="190000" />
       <workItem from="1572722002309" duration="4857000" />
       <workItem from="1572766794146" duration="7186000" />
-      <workItem from="1572936239450" duration="8072000" />
+      <workItem from="1572936239450" duration="19491000" />
+      <workItem from="1572966743822" duration="5067000" />
+      <workItem from="1573023381363" duration="10907000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>
@@ -202,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572944491304</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="owner save method added&#10;delete and edit functions are mapped to owner">
+      <created>1572944713248</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572944713248</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,5 +275,12 @@
     <MESSAGE value="update community form added" />
     <MESSAGE value="owner save method added&#10;delete and edit functions are mapped to owner" />
     <option name="LAST_COMMIT_MESSAGE" value="owner save method added&#10;delete and edit functions are mapped to owner" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="user" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

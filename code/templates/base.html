@@ -52,7 +52,7 @@
         <ul class="nav navbar-nav ml-auto">
             {% if user.is_authenticated and '/communities/' == request.path %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'community:create' %}"><span class="fas fa-plus"></span> Create New</a>
+                    <a class="nav-link" href="{% url 'community:create' %}"><span class="fas fa-plus"></span> New Community</a>
                 </li>
             {% endif %}
             <li class="nav-item dropdown">

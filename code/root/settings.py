@@ -24,11 +24,12 @@ SECRET_KEY = 'h4@*l_1ggfh$%d@h*8+0jqt#53803+jurdnwx5%bq95a8+gv#-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pcp-env.mvkkwvkkha.us-east-1.elasticbeanstalk.com', '127.0.0.1','localhost']
+ALLOWED_HOSTS = ['pcp-env.mvkkwvkkha.us-east-1.elasticbeanstalk.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'subscription.apps.SubscriptionConfig',
     'users.apps.UsersConfig',
     'community.apps.CommunityConfig',
     'django.contrib.admin',
@@ -137,22 +138,22 @@ STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static2')
 
 LOGGING = {
-'version': 1,
-'disable_existing_loggers': False,
-'handlers': {
-    'file': {
-        'level': 'DEBUG',
-        'class': 'logging.FileHandler',
-        'filename': 'django.log',
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': 'django.log',
+        },
     },
-},
-'loggers': {
-    'django': {
-        'handlers': ['file'],
-        'level': 'DEBUG',
-        'propagate': True,
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
     },
-},
 }
 
 STATIC_URL = '/static/'

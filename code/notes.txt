@@ -37,3 +37,16 @@ cd /opt/python/current/app
 then run your command.
 
 ./manage.py migrate
+
+to import module from another app without cyclic imports
+# from django.apps import apps
+#
+# Subscription = apps.get_model('subscription', 'Subscription')
+
+model function sample
+    # def subscribed(self, user):
+    #     result = False
+    #     query = Subscription.objects.filter(community__id=self.id).filter(user__id=user).count()
+    #     if query > 0:
+    #         result = True
+    #     return result

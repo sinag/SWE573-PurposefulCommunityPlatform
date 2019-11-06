@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 from django.db import models
-
 from root import settings
 
 
@@ -12,8 +11,10 @@ class Community(models.Model):
     # ToDo convert post_count to joined table result when posts are available
     post_count = models.BigIntegerField(blank=False, db_index=True)
 
-    def __str__(self):
-        return str(self.id)
 
-    class Meta:
-        verbose_name_plural = "communities"
+def __str__(self):
+    return str(self.id)
+
+
+class Meta:
+    verbose_name_plural = "communities"

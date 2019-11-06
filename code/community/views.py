@@ -9,10 +9,17 @@ class IndexView(generic.ListView):
     context_object_name = 'top_communities'
 
     def get_queryset(self):
+        # user = self.request.user.id
         """
         Return top communities by post count
         """
         return Community.objects.order_by('-post_count')[:5]
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        # context['subscriptions'] = Hotel.objects.all().order_by('star').reverse()[:3]
+        # # Add any other variables to the context here
+        return context
 
 
 class CreateView(CreateView):
