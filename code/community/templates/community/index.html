@@ -21,7 +21,7 @@
                                    class="btn btn-primary"><span
                                         class="fas fa-search"></span></a>
                                 {% if user.is_authenticated %}
-                                    {% if community.id|subscription_count:request.user.id == 0 %}
+                                    {% if community.id|subscription_count_by_user:request.user.id == 0 %}
                                         <a href="{% url 'subscription:create' community.id %}"
                                            class="btn btn-primary"><span
                                                 class="fas fa-user-plus"></span></a>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="card-footer text-muted">
                                 <div style="display: flex; justify-content: space-around">
-                                    <div>0 Members</div>
+                                    <div>{{ community.id|subscription_count }} Members</div>
                                     <div>Root Channel</div>
                                     <div>0 Posts</div>
                                 </div>
