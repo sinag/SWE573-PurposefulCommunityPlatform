@@ -17,3 +17,8 @@ def subscription_count_by_user(community_id, user_id):
 @register.filter
 def subscription_count(community_id):
     return Community.objects.get(id=community_id).subscription_set.all().count()
+
+
+@register.filter
+def community_owner(community_id):
+    return Community.objects.all().get(id=community_id).author

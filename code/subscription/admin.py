@@ -7,8 +7,8 @@ class SubscriptionAdmin(admin.ModelAdmin):
         (None, {'fields': ['user', 'community']}),
         ('Date information', {'fields': ['created_on'], 'classes': ['collapse']}),
     ]
-    list_display = ('user', 'community', 'created_on')
-    list_filter = ['user', 'created_on']
+    list_display = ('id', 'user', 'community', 'created_on')
+    list_filter = ['user', 'community']
     search_fields = ['user', 'community']
     readonly_fields = ['created_on']
 
