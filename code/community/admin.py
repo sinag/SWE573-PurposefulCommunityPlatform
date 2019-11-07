@@ -7,7 +7,7 @@ class CommunityAdmin(admin.ModelAdmin):
         (None, {'fields': ['name', 'description', 'post_count', 'author']}),
         ('Date information', {'fields': ['created_on'], 'classes': ['collapse']}),
     ]
-    list_display = ('name', 'created_on', 'post_count', 'author')
+    list_display = ('id', 'name', 'created_on', 'post_count', 'author')
     list_filter = ['author']
     search_fields = ['name', 'author']
     readonly_fields = ['created_on']

@@ -1,4 +1,9 @@
 /venv/
+django.log
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

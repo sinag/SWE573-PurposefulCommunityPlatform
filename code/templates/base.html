@@ -9,18 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static '../static/base.css' %}">
-    {% if "/users/login/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/login.js' %}"></script>{% endif %}
-    {% if "/users/password_reset/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/password_reset.js' %}"></script>{% endif %}
-    {% if "/users/reset/Nw/set-password/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/confirm_password_reset.js' %}"></script>{% endif %}
-    {% if "/users/signup/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/signup.js' %}"></script>{% endif %}
-    {% if "/communities/create" == request.path %}
-        <script type="text/javascript" src="{% static '../static/create_community.js' %}"></script>{% endif %}
-    {% if "/communities/update" in request.path %}
-        <script type="text/javascript" src="{% static '../static/update_community.js' %}"></script>{% endif %}
     <title>Purposeful Community Platform</title>
 </head>
 <body>
@@ -92,6 +80,18 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    {% if "/users/login/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/login.js' %}"></script>{% endif %}
+    {% if "/users/password_reset/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/password_reset.js' %}"></script>{% endif %}
+    {% if "/users/reset/Nw/set-password/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/confirm_password_reset.js' %}"></script>{% endif %}
+    {% if "/users/signup/" == request.path %}
+        <script type="text/javascript" src="{% static '../static/signup.js' %}"></script>{% endif %}
+    {% if "/communities/create" == request.path %}
+        <script type="text/javascript" src="{% static '../static/create_community.js' %}"></script>{% endif %}
+    {% if "/communities/update" in request.path %}
+        <script type="text/javascript" src="{% static '../static/update_community.js' %}"></script>{% endif %}
 <footer class="footer footer-transparent">
     <div class="container text-center">
         <span class="font-weight-bold">Use with purpose!</span>

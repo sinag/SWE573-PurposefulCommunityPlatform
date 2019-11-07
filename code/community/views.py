@@ -1,6 +1,10 @@
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
+
+from subscription.models import Subscription
 from .models import Community
 
 
@@ -33,6 +37,12 @@ class CreateView(CreateView):
 
     def get_success_url(self):
         return reverse('community:index')
+
+
+@receiver(post_save, sender=Community)
+def create_initial_member(sender, instance, **kwargs):
+    a = Subscription(user=instance.author, community=instance)
+    a.save()
 
 
 class UpdateView(UpdateView):
