@@ -1,7 +1,9 @@
 /venv/
 django.log
 __pycache__/
-*.py[cod]
+*.pyc
+*.pyd
+*.pyo
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
