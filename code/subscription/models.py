@@ -5,9 +5,9 @@ from root import settings
 
 
 class Subscription(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
-    community = models.ForeignKey(Community, on_delete=models.PROTECT)
-    created_on = models.DateTimeField(auto_now_add=True, blank=False)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, blank=False, null=False, db_index=True)
+    community = models.ForeignKey(Community, on_delete=models.PROTECT, blank=False, null=False, db_index=True)
+    created_on = models.DateTimeField(auto_now_add=True, blank=False, null=False)
 
     def __str__(self):
         return str(self.id)
