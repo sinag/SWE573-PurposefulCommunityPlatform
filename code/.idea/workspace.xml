@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/datatype/templates/datatype/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datatype/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datatype/templatetags/datatype_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datatype/templatetags/mytag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datatype/templates/datatype/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templates/datatype/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datatype/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +26,8 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -38,25 +43,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/community/templatetags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/root" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templatetags" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templates\community" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\templates\static\templates" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -135,6 +140,7 @@
       <workItem from="1573111952348" duration="7161000" />
       <workItem from="1573125671992" duration="8460000" />
       <workItem from="1573194348010" duration="2935000" />
+      <workItem from="1573215002545" duration="10105000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>

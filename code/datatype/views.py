@@ -13,7 +13,7 @@ class IndexView(generic.ListView):
         """
         Return top communities by post count
         """
-        return DataType.objects.all().filter(community__id=self.kwargs.get('community_id'))
+        return DataType.objects.all().filter(community__id=self.kwargs.get('community_id')).order_by('created_on')
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)

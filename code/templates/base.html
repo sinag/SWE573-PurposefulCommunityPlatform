@@ -1,4 +1,5 @@
 {% load static %}
+{% load mytag %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -40,8 +41,22 @@
         <ul class="nav navbar-nav ml-auto">
             {% if user.is_authenticated and '/communities/' == request.path %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'community:create' %}"><span class="fas fa-plus"></span> New Community</a>
+                    <a class="nav-link" href="{% url 'community:create' %}"><span class="fas fa-plus"></span> New
+                        Community</a>
                 </li>
+            {% endif %}
+            {% if user.is_authenticated %}
+                {% get_community_id as community_id_from_path %}
+                {% if 0 != community_id_from_path %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'datatype:index' community_id_from_path %}"><span class="fas fa-comment-dots"></span> New Post</a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link" href="{% url 'community:create' %}"><span class="fas fa-list"></span> New Post
+                        Type</a>
+                </li>
+                {% endif %}
             {% endif %}
             <li class="nav-item dropdown">
                 {% if user.is_authenticated %}
@@ -80,18 +95,18 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    {% if "/users/login/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/login.js' %}"></script>{% endif %}
-    {% if "/users/password_reset/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/password_reset.js' %}"></script>{% endif %}
-    {% if "/users/reset/Nw/set-password/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/confirm_password_reset.js' %}"></script>{% endif %}
-    {% if "/users/signup/" == request.path %}
-        <script type="text/javascript" src="{% static '../static/signup.js' %}"></script>{% endif %}
-    {% if "/communities/create" == request.path %}
-        <script type="text/javascript" src="{% static '../static/create_community.js' %}"></script>{% endif %}
-    {% if "/communities/update" in request.path %}
-        <script type="text/javascript" src="{% static '../static/update_community.js' %}"></script>{% endif %}
+{% if "/users/login/" == request.path %}
+    <script type="text/javascript" src="{% static '../static/login.js' %}"></script>{% endif %}
+{% if "/users/password_reset/" == request.path %}
+    <script type="text/javascript" src="{% static '../static/password_reset.js' %}"></script>{% endif %}
+{% if "/users/reset/Nw/set-password/" == request.path %}
+    <script type="text/javascript" src="{% static '../static/confirm_password_reset.js' %}"></script>{% endif %}
+{% if "/users/signup/" == request.path %}
+    <script type="text/javascript" src="{% static '../static/signup.js' %}"></script>{% endif %}
+{% if "/communities/create" == request.path %}
+    <script type="text/javascript" src="{% static '../static/create_community.js' %}"></script>{% endif %}
+{% if "/communities/update" in request.path %}
+    <script type="text/javascript" src="{% static '../static/update_community.js' %}"></script>{% endif %}
 <footer class="footer footer-transparent">
     <div class="container text-center">
         <span class="font-weight-bold">Use with purpose!</span>
