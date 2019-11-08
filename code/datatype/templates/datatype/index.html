@@ -1,0 +1,9 @@
+{% if datatypes %}
+    <ul>
+    {% for datatype in datatypes %}
+        <li>{{ datatype.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No datatypes are available.</p>
+{% endif %}
