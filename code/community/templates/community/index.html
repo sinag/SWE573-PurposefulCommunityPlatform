@@ -19,27 +19,30 @@
                                 <p class="card-text">{{ community.description }}</p>
                                 <a href="{% url 'community:detail' community.id %}"
                                    class="btn btn-primary"><span
-                                        class="fas fa-search"></span></a>
+                                        class="fas fa-search"></span> View Community</a>
                                 {% if user.is_authenticated %}
                                     {% if community.id|subscription_count_by_user:request.user.id == 0 %}
                                         <a href="{% url 'subscription:create' community.id %}"
                                            class="btn btn-primary"><span
-                                                class="fas fa-user-plus"></span></a>
+                                                class="fas fa-user-plus"></span> Join Community</a>
                                     {% else %}
-                                        <a href="{% url 'subscription:delete' community.id|subscription_id:request.user.id %}" class="btn btn-primary"><span class="fas fa-user-minus"></span></a>
+                                        <a href="{% url 'subscription:delete' community.id|subscription_id:request.user.id %}"
+                                           class="btn btn-primary"><span class="fas fa-user-minus"></span> Leave
+                                            Community</a>
                                     {% endif %}
                                     {% if community.author == request.user %}
                                         <a href="{% url 'community:update' community.id %}"
-                                           class="btn btn-primary"><span class="fas fa-edit"></span></a>
+                                           class="btn btn-primary"><span class="fas fa-edit"></span> Update
+                                            Community</a>
                                         <a href="{% url 'community:delete' community.id %}"
-                                           class="btn btn-primary"><span class="fas fa-trash-alt"></span></a>
+                                           class="btn btn-primary"><span class="fas fa-trash-alt"></span> Delete
+                                            Community</a>
                                     {% endif %}
                                 {% endif %}
                             </div>
                             <div class="card-footer text-muted">
                                 <div style="display: flex; justify-content: space-around">
                                     <div>{{ community.id|subscription_count }} Members</div>
-                                    <div>Root Channel</div>
                                     <div>0 Posts</div>
                                 </div>
                             </div>

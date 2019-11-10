@@ -1,5 +1,5 @@
 {% load static %}
-{% load mytag %}
+{% load base_template_tags %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -46,16 +46,27 @@
                 </li>
             {% endif %}
             {% if user.is_authenticated %}
-                {% get_community_id as community_id_from_path %}
-                {% if 0 != community_id_from_path %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'datatype:index' community_id_from_path %}"><span class="fas fa-comment-dots"></span> New Post</a>
-                </li>
-                <li class="nav-item">
+                {% get_community_community_id as community_id_from_community_page %}
+                {% get_datatype_community_id as community_id_from_datatype_page %}
+                {% if 0 != community_id_from_community_page %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'datatype:index' community_id_from_community_page %}"><span
+                                class="fas fa-comment-dots"></span> New Post</a>
+                    </li>
+                    <li class="nav-item">
 
-                    <a class="nav-link" href="{% url 'community:create' %}"><span class="fas fa-list"></span> New Post
-                        Type</a>
-                </li>
+                        <a class="nav-link" href="{% url 'datatype:create' community_id_from_community_page %}"><span
+                                class="fas fa-folder-plus"></span> New Post
+                            Type</a>
+                    </li>
+                {% endif %}
+                {% if 0 != community_id_from_datatype_page %}
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="{% url 'datatype:create' community_id_from_datatype_page %}"><span
+                                class="fas fa-folder-plus"></span> New Post
+                            Type</a>
+                    </li>
                 {% endif %}
             {% endif %}
             <li class="nav-item dropdown">
@@ -105,6 +116,8 @@
     <script type="text/javascript" src="{% static '../static/signup.js' %}"></script>{% endif %}
 {% if "/communities/create" == request.path %}
     <script type="text/javascript" src="{% static '../static/create_community.js' %}"></script>{% endif %}
+{% if "/datatypes/create" == request.path %}
+    <script type="text/javascript" src="{% static '../static/create_datatype.js' %}"></script>{% endif %}
 {% if "/communities/update" in request.path %}
     <script type="text/javascript" src="{% static '../static/update_community.js' %}"></script>{% endif %}
 <footer class="footer footer-transparent">
