@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/datatype/templates/datatype/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/create_datatype.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datatype/templates/datatype/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datatype/templates/datatype/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community/templates/community/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templatetags/base_template_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/base_template_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templatetags/community_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/community_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datatype/templates/datatype/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templates/datatype/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datatype/templatetags/mytag.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/base_template_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datatype/templatetags/datatype_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templatetags/datatype_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datatype/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datatype/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,18 +46,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/datatype/templates/datatype" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templates\datatype" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
@@ -143,7 +144,7 @@
       <workItem from="1573125671992" duration="8460000" />
       <workItem from="1573194348010" duration="2935000" />
       <workItem from="1573215002545" duration="10226000" />
-      <workItem from="1573391851287" duration="5440000" />
+      <workItem from="1573391851287" duration="8497000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>

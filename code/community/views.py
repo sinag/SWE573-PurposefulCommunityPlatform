@@ -10,14 +10,10 @@ from .models import Community
 
 class IndexView(generic.ListView):
     template_name = 'community/index.html'
-    context_object_name = 'top_communities'
+    context_object_name = 'communities'
 
     def get_queryset(self):
-        # user = self.request.user.id
-        """
-        Return top communities by post count
-        """
-        return Community.objects.order_by('-post_count')[:5]
+        return Community.objects.order_by('-post_count')
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
@@ -63,7 +59,8 @@ class UpdateView(UpdateView):
 class DeleteView(DeleteView):
     model = Community
     template_name = 'community/delete.html'
-    success_url = reverse_lazy('community:index')
+
+    # success_url = reverse_lazy('community:index') # Todo - remove if unnecessary
 
     def get_success_url(self):
         return reverse('community:index')

@@ -19,11 +19,14 @@
                                 <p class="card-text">{{ datatype.description }}</p>
                                 <a href="#"
                                    class="btn btn-primary"><span
-                                        class="fas fa-search"></span> View Post Type</a>
+                                        class="fas fa-search"></span> View Properties</a>
                                 {% if user.is_authenticated %}
                                     {% if datatype.author == request.user %}
                                         {% if datatype.generic == False %}
-                                            <a href="#"
+                                            <a href="{% url 'datatype:update' view.kwargs.community_id datatype.id %}"
+                                               class="btn btn-primary"><span class="fas fa-edit"></span> Update
+                                                Post Type</a>
+                                            <a href="{% url 'datatype:delete' view.kwargs.community_id datatype.id %}"
                                                class="btn btn-primary"><span class="fas fa-trash-alt"></span> Delete
                                                 Post Type</a>
                                         {% endif %}

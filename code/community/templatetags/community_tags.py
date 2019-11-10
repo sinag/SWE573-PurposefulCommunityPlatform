@@ -20,5 +20,16 @@ def subscription_count(community_id):
 
 
 @register.filter
+def posttype_count(community_id):
+    return Community.objects.get(id=community_id).datatype_set.all().count()
+
+
+@register.filter
+def reference_count(community_id):  # Todo - add post count
+    return Community.objects.get(id=community_id).subscription_set.all().count() + Community.objects.get(
+        id=community_id).datatype_set.all().count()
+
+
+@register.filter
 def community_owner(community_id):
     return Community.objects.all().get(id=community_id).author

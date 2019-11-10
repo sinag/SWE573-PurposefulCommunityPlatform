@@ -19,3 +19,8 @@ def community_id(datatype_id):
 @register.filter
 def field_count(datatype_id):
     return DataType.objects.get(id=datatype_id).property_set.all().count()
+
+
+@register.filter
+def reference_count(datatype_id):  # Todo - add existing post control, inherited property control
+    return DataType.objects.get(id=datatype_id).property_set.all().count()

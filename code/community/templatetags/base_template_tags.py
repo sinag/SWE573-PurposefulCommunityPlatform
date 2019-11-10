@@ -8,7 +8,7 @@ def get_community_community_id(context):
     result = 0
     path = str(context['request'].path)
     if path.__contains__('communities') and not path.__contains__('update') and not path.__contains__(
-            'delete') and not path.__contains__('creat'):
+            'delete') and not path.__contains__('create'):
         count = len(path.split('/'))
         if count == 4:
             result = path.split('/')[2]
