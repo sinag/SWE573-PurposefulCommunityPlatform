@@ -2,52 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/community/migrations/0016_datatype_community.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community/migrations/0017_auto_20191108_1004.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datatype/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integerfield/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/textfield/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datatype/templates/datatype/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datatype/templates/datatype/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/root/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templatetags/base_template_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/base_template_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templatetags/community_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/community_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datatype/templates/datatype/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templates/datatype/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datatype/templatetags/datatype_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templatetags/datatype_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datatype/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datatype/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +29,8 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -80,25 +46,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/community/templatetags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/datatype/templates/datatype" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templates\datatype" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templates\community" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templatetags" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\templates\static\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -177,6 +143,8 @@
       <workItem from="1573111952348" duration="7161000" />
       <workItem from="1573125671992" duration="8460000" />
       <workItem from="1573194348010" duration="2935000" />
+      <workItem from="1573215002545" duration="10226000" />
+      <workItem from="1573391851287" duration="8497000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>
@@ -297,15 +265,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="owner save method added&#10;delete and edit functions are mapped to owner" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/community/views.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="user" />
