@@ -29,11 +29,11 @@ ALLOWED_HOSTS = ['pcp-env.mvkkwvkkha.us-east-1.elasticbeanstalk.com', '127.0.0.1
 # Application definition
 
 INSTALLED_APPS = [
-    'datatype.apps.DatatypeConfig',
-    'property.apps.PropertyConfig',
-    'instance.apps.InstanceConfig',
-    'textfield.apps.TextfieldConfig',
     'integerfield.apps.IntegerfieldConfig',
+    'textfield.apps.TextfieldConfig',
+    'property.apps.PropertyConfig',
+    'datatype.apps.DatatypeConfig',
+    'instance.apps.InstanceConfig',
     'subscription.apps.SubscriptionConfig',
     'users.apps.UsersConfig',
     'community.apps.CommunityConfig',

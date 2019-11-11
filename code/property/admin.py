@@ -5,12 +5,12 @@ from property.models import Property
 
 class PropertyAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None, {'fields': ['name', 'type', 'datatype']}),
+        (None, {'fields': ['name', 'type', 'datatype', 'author']}),
         ('Date information', {'fields': ['created_on'], 'classes': ['collapse']}),
     ]
-    list_display = ('id', 'name', 'created_on', 'type', 'datatype')
-    list_filter = ['datatype', 'type']
-    search_fields = ['name', 'type', 'datatype']
+    list_display = ('id', 'name', 'type', 'datatype', 'author')
+    list_filter = ['author', 'datatype', 'type']
+    search_fields = ['name', 'datatype', 'author', 'type']
     readonly_fields = ['created_on']
 
 
