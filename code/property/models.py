@@ -10,10 +10,24 @@ class Property(models.Model):
                                blank=False, null=False, db_index=True)
     name = models.CharField(max_length=100)
     created_on = models.DateTimeField(auto_now_add=True, blank=False, null=False)
+    type_choices = [
+        (0, 'Text'),
+        (1, 'Number'),
+        (2, 'Datetime'),
+        (3, 'Enumeration'),
+        (4, 'Video'),
+        (5, 'Audio'),
+        (6, 'Image'),
+        (7, 'Email'),
+        (7, 'URL'),
+    ]
+    generic_choices = [
+        (0, 'Custom'),
+        (1, 'Generic'),
+    ]
     type = models.SmallIntegerField(blank=False,
-                                    null=False)  # Todo - document enumeration 0 text, 1 int, 2 datetime 3 enum 4
-
-    # image, 5 audio, 6 video, 7 email, 8 url
+                                    null=False, choices=type_choices)
+    generic = models.BooleanField(db_index=True, choices=generic_choices)  # False = Custom, True = Generic
 
     def __str__(self):
         return str(str(self.id) + '-' + self.name)

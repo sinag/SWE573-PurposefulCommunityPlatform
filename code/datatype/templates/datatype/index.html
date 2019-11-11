@@ -38,8 +38,7 @@
                             <div class="card-footer text-muted">
                                 <div style="display: flex; justify-content: space-around">
                                     <div>{{ datatype.id|field_count }} Fields</div>
-                                    <div>{% if datatype.generic == True %}Generic Post Type{% else %}Custom Post
-                                        Type{% endif %}</div>
+                                    <div>{{ datatype.get_generic_display }} Post Type</div>
                                     <div>0 Posts</div>
                                 </div>
                             </div>
