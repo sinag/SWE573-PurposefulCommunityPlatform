@@ -19,7 +19,7 @@ class Property(models.Model):
         (5, 'Audio'),
         (6, 'Image'),
         (7, 'Email'),
-        (7, 'URL'),
+        (8, 'URL'),
     ]
     generic_choices = [
         (0, 'Custom'),

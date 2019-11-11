@@ -18,3 +18,8 @@ def datatype_id(property_id):
 @register.filter
 def reference_count(property_id):  # Todo - add existing post control, inherited property control
     return 0
+
+
+@register.filter
+def datatype_generic(datatype__id):
+    return DataType.objects.get(id=datatype__id).generic

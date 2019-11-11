@@ -2,17 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/datatype/migrations/0002_auto_20191111_1514.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0002_property_generic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0003_auto_20191111_1508.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/property/migrations/0004_auto_20191111_1514.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/migrations/0005_auto_20191111_1546.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/property/templates/property/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datatype/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datatype/templates/datatype/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templates/datatype/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/property/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/property/templates/property/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/property/templates/property/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/templatetags/property_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/templatetags/property_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/confirm_password_reset.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/form_validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/create_community.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/create_datatype.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/password_reset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/update_community.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,25 +51,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/xproperty" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/property/templates/property" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\property\templates\property" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\xproperty" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templates\datatype" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\xproperty\templates\xproperty" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templatetags" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\xproperty" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templates\datatype" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\root" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -145,7 +151,7 @@
       <workItem from="1573215002545" duration="10226000" />
       <workItem from="1573391851287" duration="9222000" />
       <workItem from="1573454659069" duration="6780000" />
-      <workItem from="1573463247894" duration="9501000" />
+      <workItem from="1573463247894" duration="12742000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>

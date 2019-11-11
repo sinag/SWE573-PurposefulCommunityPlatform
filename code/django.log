@@ -4077,3 +4077,29 @@ LINE 1: SELECT COUNT(*) AS "__count" FROM "property_property"
                                           ^
 
 "GET /admin/property/property/ HTTP/1.1" 500 173122
+Internal Server Error: /properties/create/1
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 93, in get_form_class
+    model = self.get_queryset().model
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\detail.py", line 73, in get_queryset
+    'cls': self.__class__.__name__
+django.core.exceptions.ImproperlyConfigured: CreateView is missing a QuerySet. Define CreateView.model, CreateView.queryset, or override CreateView.get_queryset().
+"GET /properties/create/1 HTTP/1.1" 500 101850

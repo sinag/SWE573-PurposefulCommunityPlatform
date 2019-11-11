@@ -31,7 +31,8 @@
                                 <td>{{ property.author.username }}</td>
                                 <td>{{ property.created_on }}</td>
                                 <td><a href="#"
-                                       class="btn btn-primary{% if property.generic %} disabled{% endif %}"><span class="fas fa-trash-alt"></span></a></td>
+                                       class="btn btn-primary{% if property.generic %} disabled{% endif %}"><span
+                                        class="fas fa-trash-alt"></span></a></td>
                             </tr>
                         {% endfor %}
                         <tr>
@@ -41,8 +42,8 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td><a href="#"
-                                   class="btn btn-primary"><span class="fas fa-plus"></span></a></td>
+                            <td><a href="{% url 'property:create' view.kwargs.datatype_id %}"
+                                   class="btn btn-primary{% if view.kwargs.datatype_id|datatype_generic %} disabled{% endif %}"><span class="fas fa-plus"></span></a></td>
                         </tr>
                         </tbody>
                     </table>
