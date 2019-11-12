@@ -1,14 +1,33 @@
 from django.db import models
 
 from datatype.models import DataType
+from root import settings
 
 
 class Property(models.Model):
-    name = models.CharField(max_length=100, blank=False, null=False)
-    created_on = models.DateTimeField(auto_now_add=True, blank=False, null=False)
-    type = models.SmallIntegerField(blank=False, null=False,
-                                    db_index=True)  # 0 = Text, 1 = Integer, 2 = Datetime, 3 = Enumeration
     datatype = models.ForeignKey(DataType, on_delete=models.PROTECT, blank=False, null=False, db_index=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=settings.DEFAULT_ADMIN,
+                               blank=False, null=False, db_index=True)
+    name = models.CharField(max_length=100)
+    created_on = models.DateTimeField(auto_now_add=True, blank=False, null=False)
+    type_choices = [
+        (0, 'Text'),
+        (1, 'Number'),
+        (2, 'Datetime'),
+        (3, 'Enumeration'),
+        (4, 'Video'),
+        (5, 'Audio'),
+        (6, 'Image'),
+        (7, 'Email'),
+        (8, 'URL'),
+    ]
+    generic_choices = [
+        (0, 'Custom'),
+        (1, 'Generic'),
+    ]
+    type = models.SmallIntegerField(blank=False,
+                                    null=False, choices=type_choices)
+    generic = models.BooleanField(db_index=True, choices=generic_choices)  # False = Custom, True = Generic
 
     def __str__(self):
         return str(str(self.id) + '-' + self.name)

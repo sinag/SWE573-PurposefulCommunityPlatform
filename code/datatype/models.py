@@ -11,7 +11,11 @@ class DataType(models.Model):
     name = models.CharField(max_length=100)
     created_on = models.DateTimeField(auto_now_add=True, blank=False, null=False)
     description = models.CharField(max_length=500, blank=False, null=False)
-    generic = models.BooleanField(db_index=True)  # False = Custom, True = Generic
+    generic_choices = [
+        (0, 'Custom'),
+        (1, 'Generic'),
+    ]
+    generic = models.BooleanField(db_index=True, choices=generic_choices)  # False = Custom, True = Generic
 
     def __str__(self):
         return str(str(self.id) + '-' + self.name)
