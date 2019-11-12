@@ -4103,3 +4103,366 @@ Traceback (most recent call last):
     'cls': self.__class__.__name__
 django.core.exceptions.ImproperlyConfigured: CreateView is missing a QuerySet. Define CreateView.model, CreateView.queryset, or override CreateView.get_queryset().
 "GET /properties/create/1 HTTP/1.1" 500 101850
+Internal Server Error: /communities/25/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\detail.py", line 106, in get
+    self.object = self.get_object()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\detail.py", line 30, in get_object
+    queryset = self.get_queryset()
+  File "C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\views.py", line 85, in get_queryset
+    return Instance.objects.get(id=self.kwargs.get('pk'))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\query.py", line 408, in get
+    self.model._meta.object_name
+instance.models.Instance.DoesNotExist: Instance matching query does not exist.
+"GET /communities/25/ HTTP/1.1" 500 96401
+Internal Server Error: /communities/25/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\detail.py", line 106, in get
+    self.object = self.get_object()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+AttributeError: 'Instance' object has no attribute 'filter'
+"GET /communities/25/ HTTP/1.1" 500 85942
+Internal Server Error: /communities/25/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\detail.py", line 106, in get
+    self.object = self.get_object()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\detail.py", line 36, in get_object
+    queryset = queryset.filter(pk=pk)
+AttributeError: 'Instance' object has no attribute 'filter'
+"GET /communities/25/ HTTP/1.1" 500 86077
+Internal Server Error: /communities/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' not found. 'detail' is not a valid view function or pattern name.
+"GET /communities/ HTTP/1.1" 500 184695
+Internal Server Error: /communities/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' not found. 'detail' is not a valid view function or pattern name.
+"GET /communities/ HTTP/1.1" 500 184695
+Internal Server Error: /communities/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' not found. 'detail' is not a valid view function or pattern name.
+"GET /communities/ HTTP/1.1" 500 184695
+Internal Server Error: /communities/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\urls\resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' not found. 'detail' is not a valid view function or pattern name.
+"GET /communities/ HTTP/1.1" 500 184525
+Internal Server Error: /communities/25/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\library.py", line 294, in parse_bits
+    unhandled_params.pop(0)
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\library.py", line 121, in compile_func
+    kwonly, kwonly_defaults, takes_context, function_name,
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\library.py", line 299, in parse_bits
+    name)
+django.template.exceptions.TemplateSyntaxError: 'property_value' received too many positional arguments
+"GET /communities/25/ HTTP/1.1" 500 255263

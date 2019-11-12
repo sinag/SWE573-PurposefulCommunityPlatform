@@ -5,7 +5,7 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <p class="text-muted">
-                {{ view.kwargs.community_id|community_name }} Community Post Types
+               Post Types for {{ view.kwargs.community_id|community_name }}
             </p>
             {% if datatypes %}
                 {% for datatype in datatypes %}
@@ -49,12 +49,12 @@
                 <div class="card shadow-lg mb-3">
                     <div class="card text-center">
                         <div class="card-header text-white bg-secondary">
-                            Oops, no datatype found!
+                            Oops, no post type found!
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">There is nothing here</h5>
-                            <p class="card-text">Click plus icon below to create a new datatype</p>
-                            <a href="#" class="btn btn-primary"><span class="fas fa-plus"></span> New Post Type</a>
+                            <p class="card-text">Click plus icon below to create a new post type</p>
+                            <a href="{% url 'datatype:create' view.kwargs.community_id %}" class="btn btn-primary"><span class="fas fa-plus"></span> New Post Type</a>
                         </div>
                         <div class="card-footer text-muted">
                             Just now

@@ -1,5 +1,7 @@
 from django import template
 from community.models import Community
+from integerfield.models import IntegerField
+from textfield.models import TextField
 
 register = template.Library()
 
@@ -33,3 +35,17 @@ def reference_count(community_id):  # Todo - add post count
 @register.filter
 def community_owner(community_id):
     return Community.objects.all().get(id=community_id).author
+
+
+@register.filter
+def community_name(community_id):
+    return Community.objects.all().get(id=community_id).name
+
+
+@register.simple_tag
+def property_value(instance_id, property_id, property_type):
+    if property_type == 0:  # Todo - add other types
+        return TextField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first().value
+    if property_type == 1:  # Todo - add other types
+        return IntegerField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first().value
+
