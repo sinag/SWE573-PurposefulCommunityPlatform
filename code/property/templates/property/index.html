@@ -30,7 +30,7 @@
                                 <td>{{ property.get_generic_display }}</td>
                                 <td>{{ property.author.username }}</td>
                                 <td>{{ property.created_on }}</td>
-                                <td><a href="#"
+                                <td><a href="{% url 'property:delete' view.kwargs.datatype_id property.id %}"
                                        class="btn btn-primary{% if property.generic %} disabled{% endif %}"><span
                                         class="fas fa-trash-alt"></span></a></td>
                             </tr>

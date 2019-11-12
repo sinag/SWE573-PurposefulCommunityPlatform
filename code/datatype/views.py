@@ -48,7 +48,7 @@ class DeleteView(DeleteView):
 
     def get_queryset(self):
         """
-        Get community details to delete
+        Get datatype details to delete
         """
         return DataType.objects.filter(id=self.kwargs.get('pk'))
 

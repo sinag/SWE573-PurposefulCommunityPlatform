@@ -1,6 +1,6 @@
 from django.urls import reverse
 from django.views import generic
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DeleteView
 
 from datatype.models import DataType
 from property.models import Property
@@ -37,3 +37,17 @@ class CreateView(CreateView):
 
     def get_success_url(self):
         return reverse('property:index', kwargs={'datatype_id': self.kwargs.get('datatype_id')})
+
+
+class DeleteView(DeleteView):
+    model = Property
+    template_name = 'property/delete.html'
+
+    def get_success_url(self):
+        return reverse('property:index', kwargs={'datatype_id': self.kwargs.get('datatype_id')})
+
+    def get_queryset(self):
+        """
+        Get property details to delete
+        """
+        return Property.objects.filter(id=self.kwargs.get('pk'))
