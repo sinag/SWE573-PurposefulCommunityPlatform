@@ -45,7 +45,15 @@ def community_name(community_id):
 @register.simple_tag
 def property_value(instance_id, property_id, property_type):
     if property_type == 0:  # Todo - add other types
-        return TextField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first().value
-    if property_type == 1:  # Todo - add other types
-        return IntegerField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first().value
+        result = TextField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first()
+        if result is not None:
+            return result.value
+        else:
+            return ''
+    if property_type == 1:
+        result = IntegerField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first()
+        if result is not None:
+            return result.value
+        else:
+            return ''
 

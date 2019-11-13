@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templatetags/community_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/community_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/property/templates/property/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/property/templates/property/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +141,7 @@
       <workItem from="1573487565525" duration="270000" />
       <workItem from="1573543584941" duration="15488000" />
       <workItem from="1573577857547" duration="650000" />
-      <workItem from="1573643677730" duration="267000" />
+      <workItem from="1573643677730" duration="1515000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>
