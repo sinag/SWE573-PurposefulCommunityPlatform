@@ -54,10 +54,8 @@
                                 class="fas fa-comment-dots"></span> New Post</a>
                     </li>
                     <li class="nav-item">
-
-                        <a class="nav-link" href="{% url 'datatype:create' community_id_from_community_page %}"><span
-                                class="fas fa-folder-plus"></span> New Post
-                            Type</a>
+                        <a class="nav-link" href="{% url 'datatype:index' community_id_from_community_page %}"><span
+                                class="fas fa-folder"></span> Post Types</a>
                     </li>
                 {% endif %}
                 {% if 0 != community_id_from_datatype_page %}

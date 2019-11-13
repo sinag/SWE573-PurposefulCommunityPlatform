@@ -83,4 +83,4 @@ class PostsView(generic.ListView):
         """
         Get community details
         """
-        return Instance.objects.filter(datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('pk')))
+        return Instance.objects.filter(datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('pk'))).order_by('-created_on')

@@ -21,10 +21,10 @@ body {
   padding: 0 15px;
 }
 
-body {
-  background:url(background.png) no-repeat;
-  background-size:cover;
-}
+/*body {*/
+/*  background:url(background.png) no-repeat;*/
+/*  background-size:cover;*/
+/*}*/
 
 .navbar {
   background:none;
