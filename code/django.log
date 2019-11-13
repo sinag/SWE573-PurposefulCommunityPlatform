@@ -4466,3 +4466,127 @@ Traceback (most recent call last):
     name)
 django.template.exceptions.TemplateSyntaxError: 'property_value' received too many positional arguments
 "GET /communities/25/ HTTP/1.1" 500 255263
+Internal Server Error: /communities/25/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags\community_tags.py", line 48, in property_value
+    return TextField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first().value
+AttributeError: 'NoneType' object has no attribute 'value'
+"GET /communities/25/ HTTP/1.1" 500 209331
+Internal Server Error: /communities/25/
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags\community_tags.py", line 48, in property_value
+    return TextField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first().value
+AttributeError: 'NoneType' object has no attribute 'value'
+"GET /communities/25/ HTTP/1.1" 500 209331

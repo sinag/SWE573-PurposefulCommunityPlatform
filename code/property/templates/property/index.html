@@ -52,12 +52,13 @@
                 <div class="card shadow-lg mb-3">
                     <div class="card text-center">
                         <div class="card-header text-white bg-secondary">
-                            Oops, no property found!
+                            Oops, no field found!
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">There is nothing here</h5>
-                            <p class="card-text">Click plus icon below to create a new property</p>
-                            <a href="#" class="btn btn-primary"><span class="fas fa-plus"></span> New Property</a>
+                            <p class="card-text">Click plus icon below to create a new field</p>
+                            <a href="{% url 'property:create' view.kwargs.datatype_id %}"
+                                   class="btn btn-primary{% if view.kwargs.datatype_id|datatype_generic %} disabled{% endif %}"><span class="fas fa-plus"></span> New Field</a>
                         </div>
                         <div class="card-footer text-muted">
                             Just now
