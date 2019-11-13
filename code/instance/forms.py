@@ -1,10 +1,11 @@
 from django import forms
 
-from instance.models import Instance
+
+class CreatePost(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(CreatePost, self).__init__(*args, **kwargs)
 
 
-class MyForm(forms.ModelForm):
-    class Meta:
-        model = Instance
-        fields = []
-    name = forms.CharField(label='name', max_length=100)
+class DeletePost(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(DeletePost, self).__init__(*args, **kwargs)

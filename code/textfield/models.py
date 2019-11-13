@@ -5,7 +5,7 @@ from property.models import Property
 
 
 class TextField(models.Model):
-    value = models.CharField(max_length=255)
+    value = models.CharField(max_length=255, blank=True, null=True)
     instance = models.ForeignKey(Instance, on_delete=models.PROTECT, blank=False, null=False, db_index=True)
     property = models.ForeignKey(Property, on_delete=models.PROTECT, blank=False, null=False, db_index=True)
 

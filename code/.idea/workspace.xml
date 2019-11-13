@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/instance/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/templates/instance/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instance/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/templates/instance/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datatype/templates/datatype/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templates/datatype/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templatetags/community_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/community_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datatype/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/templates/instance/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/instance/templates/instance/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/templatetags/instance_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/templatetags/instance_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/root/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integerfield/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/integerfield/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textfield/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/textfield/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,25 +48,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/instance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/instance/templates/instance" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\instance" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\property\templates\property" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\xproperty" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templates\datatype" />
-      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\xproperty\templates\xproperty" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\community\templatetags" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templatetags" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\static" />
       <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\instance\templates\instance" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\instance" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\property\templates\property" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\xproperty" />
+      <recent name="C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\datatype\templates\datatype" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -149,7 +152,8 @@
       <workItem from="1573487565525" duration="270000" />
       <workItem from="1573543584941" duration="15488000" />
       <workItem from="1573577857547" duration="650000" />
-      <workItem from="1573643677730" duration="8200000" />
+      <workItem from="1573643677730" duration="8329000" />
+      <workItem from="1573658319554" duration="11839000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>
@@ -270,6 +274,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="owner save method added&#10;delete and edit functions are mapped to owner" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/instance/views.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="user" />

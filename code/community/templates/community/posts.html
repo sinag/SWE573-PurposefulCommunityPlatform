@@ -18,9 +18,9 @@
                                 {% if instance.datatype.generic %}
                                     {% for field in instance.fields %}
                                         {% if forloop.counter == 1 %}
-                                        <h5 class="card-title">{% property_value instance.id field.id field.type %}</h5>
+                                            <h5 class="card-title">{% property_value instance.id field.id field.type %}</h5>
                                         {% else %}
-                                        <p class="card-text">{% property_value instance.id field.id field.type %}</p>
+                                            <p class="card-text">{% property_value instance.id field.id field.type %}</p>
                                         {% endif %}
                                     {% endfor %}
                                 {% else %}
@@ -42,6 +42,16 @@
                                         </div>
                                         <div class="col-sm-2"></div>
                                     </div>
+                                {% endif %}
+                                {% if user.is_authenticated %}
+                                    {% if instance.author == request.user %}
+                                        <a href="{% url 'instance:delete' instance.datatype.id instance.id %}"
+                                           class="btn btn-primary"><span class="fas fa-edit"></span> Update
+                                            Post</a>
+                                        <a href="{% url 'instance:delete' instance.datatype.id instance.id %}"
+                                           class="btn btn-primary"><span class="fas fa-trash-alt"></span> Delete
+                                            Post</a>
+                                    {% endif %}
                                 {% endif %}
                             </div>
                             <div class="card-footer text-muted">

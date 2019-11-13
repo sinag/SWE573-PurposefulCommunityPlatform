@@ -4,20 +4,21 @@
     <div class="container mt-3">
         <div class="card rounded shadow-lg">
             <div class="card-header text-white bg-secondary">
-                <h4 class="mb-0">Create New {{ view.kwargs.datatype_id|datatype_name }} Post</h4>
+                <h4 class="mb-0">Delete {{ view.kwargs.pk|datatype_name_from_instance_id }} Post</h4>
             </div>
             <div class="card-body">
                 <form class="form needs-validation" role="form" autocomplete="off" id="new_community_form" method="post"
                       novalidate>
                     {% csrf_token %}
-                    {% datatype_fields view.kwargs.datatype_id as fields_from_datatype %}
-                    {% for field in fields_from_datatype %}
+                    {% datatype_fields_from_instance_id view.kwargs.pk as fields_from_instance %}
+                    {% for field in fields_from_instance %}
                         <div class="form-group">
                             <label for="id_{{ field.name }}">{{ field.name }}</label>
                             <input type="text" class="form-control form-control-lg rounded"
                                    name="{{ field.name }}"
                                    id="id_{{ field.name }}"
-                            >
+                                   value="{% property_value view.kwargs.pk field.id field.type %}"
+                                   disabled>
                         </div>
                     {% endfor %}
                     {% if form.errors %}
@@ -34,7 +35,7 @@
                             </div>
                         {% endfor %}
                     {% endif %}
-                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Save</button>
+                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Confirm</button>
                     <a href="{{ view.get_success_url }}" class="mr-1 btn btn-success btn-lg float-right">Cancel</a>
                 </form>
             </div>
