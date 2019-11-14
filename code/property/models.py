@@ -27,6 +27,7 @@ class Property(models.Model):
     type = models.SmallIntegerField(blank=False,
                                     null=False, choices=type_choices)
     generic = models.BooleanField(db_index=True, choices=generic_choices)  # False = Custom, True = Generic
+    required = models.BooleanField(db_index=True, blank=False, null=False)
 
     def __str__(self):
         return str(str(self.id) + '-' + self.name)

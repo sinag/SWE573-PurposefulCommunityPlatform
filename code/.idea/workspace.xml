@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/property/migrations/0006_property_required.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templatetags/base_template_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/base_template_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templatetags/community_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/templatetags/community_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/django.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/templates/instance/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/instance/templates/instance/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/templates/instance/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/instance/templates/instance/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/templates/instance/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/instance/templates/instance/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/templatetags/instance_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/templatetags/instance_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/templates/property/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/property/templates/property/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/templates/property/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/property/templates/property/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/property/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +150,7 @@
       <workItem from="1573577857547" duration="650000" />
       <workItem from="1573643677730" duration="8329000" />
       <workItem from="1573658319554" duration="12234000" />
-      <workItem from="1573712203782" duration="6742000" />
+      <workItem from="1573712203782" duration="9517000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>

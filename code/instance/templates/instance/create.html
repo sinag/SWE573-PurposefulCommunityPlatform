@@ -13,13 +13,16 @@
                     {% datatype_fields view.kwargs.datatype_id as fields_from_datatype %}
                     {% for field in fields_from_datatype %}
                         <div class="form-group">
-                            <label for="id_{{ field.name }}">{{ field.name }}</label>
-                            <input type="{{ field.type|field_type_to_input_type }}" class="form-control form-control-lg rounded"
-                                   name="{{ field.name }}"
-                                   id="id_{{ field.name }}"
-                            >
-                        </div>
+                        <label for="id_{{ field.name }}">{{ field.name }}</label>
+                        <input type="{{ field.type|field_type_to_input_type }}"
+                               class="form-control form-control-lg rounded"
+                               name="{{ field.name }}"
+                               id="id_{{ field.name }}"
+                               {% if field.required %}required{% endif %}>
+                        {% if field.required %}
+                            <div class="invalid-feedback">Oops, this is a required field.</div>{% endif %}
                     {% endfor %}
+                    </div>
                     {% if form.errors %}
                         {% for field in form %}
                             {% for error in field.errors %}

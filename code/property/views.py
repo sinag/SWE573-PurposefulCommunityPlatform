@@ -26,7 +26,7 @@ class IndexView(generic.ListView):
 
 class CreateView(CreateView):
     model = Property
-    fields = ['name', 'type']
+    fields = ['name', 'type', 'required']
     template_name = 'property/create.html'
 
     def form_valid(self, form):
