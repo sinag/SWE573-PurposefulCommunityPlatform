@@ -1,11 +1,8 @@
 from django import forms
 
 
-class CreatePost(forms.Form):
+class DynamicPost(forms.Form):
     def __init__(self, *args, **kwargs):
-        super(CreatePost, self).__init__(*args, **kwargs)
+        super(DynamicPost, self).__init__(*args, **kwargs)
 
 
-class DeletePost(forms.Form):
-    def __init__(self, *args, **kwargs):
-        super(DeletePost, self).__init__(*args, **kwargs)
