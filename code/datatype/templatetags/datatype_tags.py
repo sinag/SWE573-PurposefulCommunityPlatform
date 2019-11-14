@@ -2,6 +2,7 @@ from django import template
 
 from community.models import Community
 from datatype.models import DataType
+from instance.models import Instance
 
 register = template.Library()
 
@@ -24,3 +25,8 @@ def field_count(datatype_id):
 @register.filter
 def reference_count(datatype_id):  # Todo - add existing post control, inherited property control
     return DataType.objects.get(id=datatype_id).property_set.all().count()
+
+
+@register.filter
+def post_count(datatype_id):
+    return Instance.objects.filter(datatype_id=datatype_id).count()

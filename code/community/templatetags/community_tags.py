@@ -1,6 +1,8 @@
 from django import template
 from community.models import Community
+from datatype.models import DataType
 from datetimefield.models import DateTimeField
+from instance.models import Instance
 from integerfield.models import IntegerField
 from textfield.models import TextField
 
@@ -20,6 +22,11 @@ def subscription_count_by_user(community_id, user_id):
 @register.filter
 def subscription_count(community_id):
     return Community.objects.get(id=community_id).subscription_set.all().count()
+
+
+@register.filter
+def post_count(community_id):
+    return Instance.objects.filter(datatype_id__in=DataType.objects.all().filter(community_id=community_id)).count()
 
 
 @register.filter
