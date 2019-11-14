@@ -62,8 +62,6 @@ class DeleteView(DeleteView):
     model = Community
     template_name = 'community/delete.html'
 
-    # success_url = reverse_lazy('community:index') # Todo - remove if unnecessary
-
     def get_success_url(self):
         return reverse('community:index')
 
@@ -83,4 +81,5 @@ class PostsView(generic.ListView):
         """
         Get community details
         """
-        return Instance.objects.filter(datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('pk'))).order_by('-created_on')
+        return Instance.objects.filter(
+            datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('pk'))).order_by('-created_on')

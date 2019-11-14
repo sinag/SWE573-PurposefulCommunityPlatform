@@ -13,7 +13,7 @@ class Property(models.Model):
         (0, 'Text'),
         (1, 'Number'),
         (2, 'Datetime'),
-        (3, 'Enumeration'),
+        # (3, 'Enumeration'),
         (4, 'Video'),
         (5, 'Audio'),
         (6, 'Image'),

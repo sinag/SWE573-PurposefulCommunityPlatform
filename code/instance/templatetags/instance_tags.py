@@ -1,5 +1,6 @@
 from django import template
 from datatype.models import DataType
+from datetimefield.models import DateTimeField
 from instance.models import Instance
 from integerfield.models import IntegerField
 from textfield.models import TextField
@@ -30,7 +31,7 @@ def datatype_name_from_instance_id(instance_id):
 # Todo - this tag also exists in community_tags, think about merge
 @register.simple_tag
 def property_value(instance_id, property_id, property_type):
-    if property_type == 0:  # Todo - add other datatype support
+    if property_type == 0 or property_type == 4 or property_type == 5 or property_type == 6 or property_type == 7 or property_type == 8:
         result = TextField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first()
         if result is not None:
             return result.value
@@ -38,6 +39,15 @@ def property_value(instance_id, property_id, property_type):
             return ''
     if property_type == 1:
         result = IntegerField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first()
+        if result is not None:
+            if result.value is not None:
+                return result.value
+            else:
+                return ''
+        else:
+            return ''
+    if property_type == 2:
+        result = DateTimeField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first()
         if result is not None:
             if result.value is not None:
                 return result.value
@@ -56,7 +66,7 @@ def field_type_to_input_type(field_type):
     if field_type == 1:
         result = "number"
     if field_type == 2:
-        result = "datetime-local"
+        result = "date"
     if field_type == 4:
         result = "url"
     if field_type == 5:
