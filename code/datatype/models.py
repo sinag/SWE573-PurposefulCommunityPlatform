@@ -1,6 +1,6 @@
 from django.db import models
-
 from community.models import Community
+from property.models import Property
 from root import settings
 
 
@@ -19,6 +19,9 @@ class DataType(models.Model):
 
     def __str__(self):
         return str(str(self.id) + '-' + self.name)
+
+    def fields(self):
+        return Property.objects.all().filter(datatype=self.id)
 
     class Meta:
         verbose_name = "datatype"

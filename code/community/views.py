@@ -1,9 +1,11 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
+from datatype.models import DataType
+from instance.models import Instance
 from subscription.models import Subscription
 from .models import Community
 
@@ -60,8 +62,6 @@ class DeleteView(DeleteView):
     model = Community
     template_name = 'community/delete.html'
 
-    # success_url = reverse_lazy('community:index') # Todo - remove if unnecessary
-
     def get_success_url(self):
         return reverse('community:index')
 
@@ -72,12 +72,14 @@ class DeleteView(DeleteView):
         return Community.objects.filter(id=self.kwargs.get('pk'))
 
 
-class DetailView(generic.DetailView):
-    model = Community
-    template_name = 'community/detail.html'
+class PostsView(generic.ListView):
+    model = Instance
+    template_name = 'community/posts.html'
+    context_object_name = 'instances'
 
     def get_queryset(self):
         """
         Get community details
         """
-        return Community.objects.filter(id=self.kwargs.get('pk'))
+        return Instance.objects.filter(
+            datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('pk'))).order_by('-created_on')

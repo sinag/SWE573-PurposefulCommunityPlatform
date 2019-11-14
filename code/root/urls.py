@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
+    path('instance/', include('instance.urls')),
     path('properties/', include('property.urls')),
     path('subscriptions/', include('subscription.urls')),
     path('communities/', include('community.urls')),

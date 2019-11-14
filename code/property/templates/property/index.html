@@ -5,7 +5,7 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <p class="text-muted">
-                {{ view.kwargs.datatype_id|datatype_name }} Post Type Fields
+                Fields for {{ view.kwargs.datatype_id|datatype_name }}
             </p>
             {% if properties %}
                 <div class="card shadow-lg">
@@ -18,6 +18,7 @@
                             <th scope="col">Field Type</th>
                             <th scope="col">Created by</th>
                             <th scope="col">Created On</th>
+                            <th scope="col">Required</th>
                             <th scope="col">Action</th>
                         </tr>
                         </thead>
@@ -30,6 +31,7 @@
                                 <td>{{ property.get_generic_display }}</td>
                                 <td>{{ property.author.username }}</td>
                                 <td>{{ property.created_on }}</td>
+                                <td>{{ property.required }}</td>
                                 <td><a href="{% url 'property:delete' view.kwargs.datatype_id property.id %}"
                                        class="btn btn-primary{% if property.generic %} disabled{% endif %}"><span
                                         class="fas fa-trash-alt"></span></a></td>
@@ -42,8 +44,10 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                             <td><a href="{% url 'property:create' view.kwargs.datatype_id %}"
-                                   class="btn btn-primary{% if view.kwargs.datatype_id|datatype_generic %} disabled{% endif %}"><span class="fas fa-plus"></span></a></td>
+                                   class="btn btn-primary{% if view.kwargs.datatype_id|datatype_generic %} disabled{% endif %}"><span
+                                    class="fas fa-plus"></span></a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -52,12 +56,14 @@
                 <div class="card shadow-lg mb-3">
                     <div class="card text-center">
                         <div class="card-header text-white bg-secondary">
-                            Oops, no property found!
+                            Oops, no field found!
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">There is nothing here</h5>
-                            <p class="card-text">Click plus icon below to create a new property</p>
-                            <a href="#" class="btn btn-primary"><span class="fas fa-plus"></span> New Property</a>
+                            <p class="card-text">Click plus icon below to create a new field</p>
+                            <a href="{% url 'property:create' view.kwargs.datatype_id %}"
+                               class="btn btn-primary{% if view.kwargs.datatype_id|datatype_generic %} disabled{% endif %}"><span
+                                    class="fas fa-plus"></span> New Field</a>
                         </div>
                         <div class="card-footer text-muted">
                             Just now

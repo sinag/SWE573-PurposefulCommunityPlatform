@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load community_tags %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <p class="text-muted">
+                Posts for {{ view.kwargs.pk|community_name }}
+            </p>
+            {% if instances %}
+                {% for instance in instances %}
+                    <div class="card shadow-lg mb-3">
+                        <div class="card text-center">
+                            <div class="card-header text-white bg-secondary">
+                                Created by {{ instance.author.username }} @ {{ instance.created_on }}
+                            </div>
+                            <div class="card-body">
+                                {% if instance.datatype.generic %}
+                                    {% for field in instance.fields %}
+                                        {% if forloop.counter == 1 %}
+                                            <h5 class="card-title">{% property_value instance.id field.id field.type %}</h5>
+                                        {% else %}
+                                            <p class="card-text">{% property_value instance.id field.id field.type %}</p>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                    <div class="row text-left">
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-8">
+                                            <form class="form" role="form" autocomplete="off" novalidate>
+                                                {% for field in instance.fields %}
+                                                    <div class="form-group">
+                                                        <label for="id_{{ field.name }}">{{ field.name }}</label>
+                                                        <input type="{{ field.type|field_type_to_input_type }}" class="form-control form-control-lg rounded"
+                                                               name="{{ field.name }}"
+                                                               id="id_{{ field.name }}"
+                                                               value="{% property_value instance.id field.id field.type %}"
+                                                               disabled>
+                                                    </div>
+                                                {% endfor %}
+                                            </form>
+                                        </div>
+                                        <div class="col-sm-2"></div>
+                                    </div>
+                                {% endif %}
+                                {% if user.is_authenticated %}
+                                    {% if instance.author == request.user %}
+                                        <a href="{% url 'instance:update' instance.id %}"
+                                           class="btn btn-primary"><span class="fas fa-edit"></span> Update
+                                            Post</a>
+                                        <a href="{% url 'instance:delete' instance.datatype.id instance.id %}"
+                                           class="btn btn-primary"><span class="fas fa-trash-alt"></span> Delete
+                                            Post</a>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                            <div class="card-footer text-muted">
+                                <div style="display: flex; justify-content: space-around">
+                                    <div>Post Type: {{ instance.datatype.name }} </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="card shadow-lg mb-3">
+                    <div class="card text-center">
+                        <div class="card-header text-white bg-secondary">
+                            Oops, no post found!
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">There is nothing here</h5>
+                            <p class="card-text">Click plus icon below to create a new post</p>
+                            <a class="btn btn-primary" href="{% url 'datatype:index' view.kwargs.pk %}"><span
+                                    class="fas fa-comment-dots"></span> New Post</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Just now
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+{% endblock %}

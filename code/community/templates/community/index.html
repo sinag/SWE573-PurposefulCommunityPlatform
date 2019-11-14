@@ -17,7 +17,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ community.name }}</h5>
                                 <p class="card-text">{{ community.description }}</p>
-                                <a href="{% url 'community:detail' community.id %}"
+                                <a href="{% url 'community:posts' community.id %}"
                                    class="btn btn-primary"><span
                                         class="fas fa-search"></span> View Community</a>
                                 {% if user.is_authenticated %}
