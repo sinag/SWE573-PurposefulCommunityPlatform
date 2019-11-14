@@ -31,7 +31,7 @@
                                                 {% for field in instance.fields %}
                                                     <div class="form-group">
                                                         <label for="id_{{ field.name }}">{{ field.name }}</label>
-                                                        <input type="text" class="form-control form-control-lg rounded"
+                                                        <input type="{{ field.type|field_type_to_input_type }}" class="form-control form-control-lg rounded"
                                                                name="{{ field.name }}"
                                                                id="id_{{ field.name }}"
                                                                value="{% property_value instance.id field.id field.type %}"

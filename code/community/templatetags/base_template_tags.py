@@ -1,5 +1,7 @@
 from django import template
 
+from subscription.models import Subscription
+
 register = template.Library()
 
 
@@ -12,6 +14,14 @@ def get_community_community_id(context):
         count = len(path.split('/'))
         if count == 4:
             result = path.split('/')[2]
+    return result
+
+
+@register.simple_tag(takes_context=True)
+def is_current_user_subscribed(context, community_id):
+    result = False
+    if Subscription.objects.filter(community_id=community_id).filter(user_id=context['request'].user.id).count() > 0:
+        result = True
     return result
 
 

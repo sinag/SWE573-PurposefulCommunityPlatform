@@ -45,3 +45,26 @@ def property_value(instance_id, property_id, property_type):
                 return ''
         else:
             return ''
+
+
+# Todo - this tag also exists in community_tags, think about merge
+@register.filter
+def field_type_to_input_type(field_type):
+    result = "text"
+    if field_type == 0:
+        result = "text"
+    if field_type == 1:
+        result = "number"
+    if field_type == 2:
+        result = "datetime-local"
+    if field_type == 4:
+        result = "url"
+    if field_type == 5:
+        result = "url"
+    if field_type == 6:
+        result = "image"
+    if field_type == 7:
+        result = "email"
+    if field_type == 8:
+        result = "url"
+    return result

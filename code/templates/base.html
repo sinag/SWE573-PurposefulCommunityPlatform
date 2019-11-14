@@ -46,6 +46,8 @@
                 {% get_community_community_id as community_id_from_community_page %}
                 {% get_datatype_community_id as community_id_from_datatype_page %}
                 {% if 0 != community_id_from_community_page %}
+                {% is_current_user_subscribed community_id_from_community_page as is_subscribed %}
+                    {% if is_subscribed %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'datatype:index' community_id_from_community_page %}"><span
                                 class="fas fa-comment-dots"></span> New Post</a>
@@ -54,6 +56,7 @@
                         <a class="nav-link" href="{% url 'datatype:index' community_id_from_community_page %}"><span
                                 class="fas fa-folder"></span> Post Types</a>
                     </li>
+                        {% endif %}
                 {% endif %}
                 {% if 0 != community_id_from_datatype_page %}
                     <li class="nav-item">

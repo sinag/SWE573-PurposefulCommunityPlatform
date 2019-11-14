@@ -8008,3 +8008,123 @@ Traceback (most recent call last):
     return int(value)
 ValueError: invalid literal for int() with base 10: 'k'
 "POST /instance/update/73 HTTP/1.1" 500 139324
+Internal Server Error: /instance/update/74
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\instance\views.py", line 87, in form_valid
+    integerfield.save()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 851, in _save_table
+    forced_update)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 900, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\query.py", line 760, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1429, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1087, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 789, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 784, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1819, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'kkk'
+"POST /instance/update/74 HTTP/1.1" 500 139365
+Internal Server Error: /instance/update/74
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\instance\views.py", line 87, in form_valid
+    integerfield.save()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 851, in _save_table
+    forced_update)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 900, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\query.py", line 760, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1429, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1087, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 789, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 784, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1819, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'ooo'
+"POST /instance/update/74 HTTP/1.1" 500 139355
+Internal Server Error: /instance/update/74
+Traceback (most recent call last):
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\views\generic\edit.py", line 142, in post
+    return self.form_valid(form)
+  File "C:\Users\ygulsen\Desktop\SWE573-PurposefullCommunityPlatform\code\instance\views.py", line 87, in form_valid
+    integerfield.save()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 741, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 779, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 851, in _save_table
+    forced_update)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\base.py", line 900, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\query.py", line 760, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1429, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1087, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1395, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 789, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 784, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\ygulsen\PycharmProjects\mysite\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1819, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+"POST /instance/update/74 HTTP/1.1" 500 139319
