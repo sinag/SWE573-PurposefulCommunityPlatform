@@ -4,7 +4,7 @@ from root import settings
 
 
 class Property(models.Model):
-    datatype = models.ForeignKey('datatype.DataType', on_delete=models.PROTECT, blank=False, null=False, db_index=True)
+    datatype = models.ForeignKey('datatype.DataType', on_delete=models.CASCADE, blank=False, null=False, db_index=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=settings.DEFAULT_ADMIN,
                                blank=False, null=False, db_index=True)
     name = models.CharField(max_length=100)

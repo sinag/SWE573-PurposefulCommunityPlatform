@@ -22,13 +22,6 @@
                                required></textarea>
                         <div class="invalid-feedback">Oops, you missed description.</div>
                     </div>
-                    <div class="form-group">
-                        <label for="id_post_count">Post Count</label>
-                        <input type="number" class="form-control form-control-lg rounded" name="post_count"
-                               id="id_post_count"
-                               required>
-                        <div class="invalid-feedback">Oops, you missed post count.</div>
-                    </div>
                     {% if form.errors %}
                         {% for field in form %}
                             {% for error in field.errors %}
