@@ -1,6 +1,10 @@
+from django.db import transaction
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 from django.views.generic import CreateView, DeleteView, UpdateView
+from django.views.generic.edit import FormMixin
+
+from property.models import Property
 from .models import DataType
 from community.models import Community
 
@@ -30,10 +34,19 @@ class CreateView(CreateView):
     template_name = 'datatype/create.html'
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
-        form.instance.generic = False
-        form.instance.community = Community.objects.get(id=self.kwargs.get('community_id'))
-        return super().form_valid(form)
+        with transaction.atomic():
+            form.instance.author = self.request.user
+            form.instance.generic = False
+            form.instance.community = Community.objects.get(id=self.kwargs.get('community_id'))
+            form.instance.save()
+            property_title = Property(datatype=form.instance, author=self.request.user, name='Title', type=0, generic=1,
+                                      required=True)
+            property_title.save()
+            property_semantic_tag = Property(datatype=form.instance, author=self.request.user, name='Semantic Tag',
+                                             type=0, generic=1, required=True)
+            property_semantic_tag.save()
+            return FormMixin.form_valid(self, form)
+            # return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('datatype:index', kwargs={'community_id': self.kwargs.get('community_id')})
