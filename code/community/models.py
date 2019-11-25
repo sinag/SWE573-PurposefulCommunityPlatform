@@ -9,8 +9,6 @@ class Community(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False)
     created_on = models.DateTimeField(auto_now_add=True, blank=False, null=False)
     description = models.CharField(max_length=500, blank=False, null=False)
-    # ToDo convert post_count to joined table result when posts are available
-    post_count = models.BigIntegerField(blank=False, null=False, db_index=True)
 
     def __str__(self):
         return str(self.name)
