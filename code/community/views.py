@@ -43,7 +43,7 @@ class CreateView(CreateView):
                                             type=0, generic=1,
                                             required=True)
             property_description.save()
-            property_semantic_tag = Property(datatype=datatype, author=self.request.user, name='Semantic Tag',
+            property_semantic_tag = Property(datatype=datatype, author=self.request.user, name='Semantic Tags',
                                              type=0, generic=1, required=True)
             property_semantic_tag.save()
             return FormMixin.form_valid(self, form)

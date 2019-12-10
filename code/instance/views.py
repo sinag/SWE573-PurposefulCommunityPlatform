@@ -20,8 +20,12 @@ class CreateView(FormView):
             instance.save()
             for field in DataType.objects.get(id=self.kwargs.get('datatype_id')).fields():
                 if field.type == 0 or field.type == 4 or field.type == 5 or field.type == 6 or field.type == 7 or field.type == 8:
-                    value = TextField(value=form.data[field.name], property_id=field.id, instance_id=instance.id)
-                    value.save()
+                    if field.name == 'Semantic Tags':
+                        value = TextField(value=form.data['hdn_tags'], property_id=field.id, instance_id=instance.id)
+                        value.save()
+                    else:
+                        value = TextField(value=form.data[field.name], property_id=field.id, instance_id=instance.id)
+                        value.save()
                 if field.type == 1:
                     if form.data[field.name] is not '':
                         value = IntegerField(value=int(form.data[field.name]), property_id=field.id,
@@ -82,11 +86,15 @@ class UpdateView(FormView):
             for field in DataType.objects.get(id=instance.datatype.id).fields():
                 if field.type == 0 or field.type == 4 or field.type == 5 or field.type == 6 or field.type == 7 or field.type == 8:
                     textfield = TextField.objects.filter(instance_id=instance.id).filter(property_id=field.id).first()
+                    if field.name == 'Semantic Tags':
+                        new_value = form.data['hdn_tags']
+                    else:
+                        new_value = form.data[field.name]
                     if textfield is None:
-                        textfield = TextField(value=form.data[field.name], property_id=field.id,
+                        textfield = TextField(value=new_value, property_id=field.id,
                                               instance_id=instance.id)
                     else:
-                        textfield.value = form.data[field.name]
+                        textfield.value = new_value
                     textfield.save()
                 if field.type == 1:
                     integerfield = IntegerField.objects.filter(instance_id=instance.id).filter(
