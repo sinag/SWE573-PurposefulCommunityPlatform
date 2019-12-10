@@ -50,7 +50,7 @@ def property_value(instance_id, property_id, property_type):
         result = DateTimeField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first()
         if result is not None:
             if result.value is not None:
-                return result.value
+                return result.value.strftime("%Y-%m-%dT%H:%M:%S")
             else:
                 return ''
         else:
@@ -66,7 +66,7 @@ def field_type_to_input_type(field_type):
     if field_type == 1:
         result = "number"
     if field_type == 2:
-        result = "date"
+        result = "datetime-local"
     if field_type == 4:
         result = "url"
     if field_type == 5:
