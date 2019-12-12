@@ -1,10 +1,15 @@
 from django.db import transaction
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse
 from django.views import generic
 from django.views.generic import CreateView, DeleteView, UpdateView
-from django.views.generic.edit import FormMixin
+from django.views.generic.edit import FormMixin, FormView
 
+from datetimefield.models import DateTimeField
+from instance.models import Instance
+from integerfield.models import IntegerField
 from property.models import Property
+from textfield.models import TextField
+from .forms import SearchForm
 from .models import DataType
 from community.models import Community
 
@@ -79,3 +84,45 @@ class UpdateView(UpdateView):
         Get community details to delete
         """
         return DataType.objects.filter(id=self.kwargs.get('pk'))
+
+
+class SearchView(FormView):
+    template_name = 'datatype/search.html'
+    form_class = SearchForm
+
+    def form_valid(self, form):
+        self.request.session['search_data'] = form.data
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('datatype:result', kwargs={'community_id': self.kwargs.get('community_id'),
+                                                  'datatype_id': self.kwargs.get('datatype_id')})
+
+
+class ResultView(generic.ListView):
+    model = Instance
+    template_name = 'datatype/results.html'
+    context_object_name = 'instances'
+
+    def get_queryset(self):
+        """
+        Get search results
+        """
+        search_data = self.request.session.get('search_data')
+        for instance in Instance.objects.all():
+            instance_id = instance.id
+            for field in DataType.objects.get(id=self.kwargs.get('datatype_id')).fields():
+                search_keyword = search_data[field.name]
+                if field.type == 0 or field.type == 4 or field.type == 5 or field.type == 6 or field.type == 7 or field.type == 8:
+                    field_value = TextField.objects.filter(instance_id=instance.id).filter(
+                        property_id=field.id).first()
+                if field.type == 1:
+                    field_value = IntegerField.objects.filter(instance_id=instance.id).filter(
+                        property_id=field.id).first()
+                if field.type == 2:
+                    field_value = DateTimeField.objects.filter(instance_id=instance.id).filter(
+                        property_id=field.id).first()
+
+        return Instance.objects.filter(
+            datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('community_id'))).order_by(
+            '-created_on')
