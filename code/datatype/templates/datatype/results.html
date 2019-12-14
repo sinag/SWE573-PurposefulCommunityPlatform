@@ -148,7 +148,7 @@
                         <div class="card-body">
                             <h5 class="card-title">There is nothing here</h5>
                             <p class="card-text">Click plus icon below to create a new post</p>
-                            <a class="btn btn-primary" href="{% url 'datatype:index' view.kwargs.pk %}"><span
+                            <a class="btn btn-primary" href="{% url 'instance:create' view.kwargs.datatype_id %}"><span
                                     class="fas fa-comment-dots"></span> New Post</a>
                         </div>
                         <div class="card-footer text-muted">

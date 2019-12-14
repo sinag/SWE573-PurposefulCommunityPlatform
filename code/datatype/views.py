@@ -108,21 +108,43 @@ class ResultView(generic.ListView):
         """
         Get search results
         """
+        search_results = []
+        search_keywords = []
         search_data = self.request.session.get('search_data')
-        for instance in Instance.objects.all():
+        for field in DataType.objects.get(id=self.kwargs.get('datatype_id')).fields():
+            if search_data[field.name] is not '':
+                search_keywords.append(search_data[field.name])
+
+        for instance in Instance.objects.filter(datatype_id=self.kwargs.get('datatype_id')):
             instance_id = instance.id
+            search_match = []
             for field in DataType.objects.get(id=self.kwargs.get('datatype_id')).fields():
                 search_keyword = search_data[field.name]
                 if field.type == 0 or field.type == 4 or field.type == 5 or field.type == 6 or field.type == 7 or field.type == 8:
-                    field_value = TextField.objects.filter(instance_id=instance.id).filter(
+                    textfield = TextField.objects.filter(instance_id=instance.id).filter(
                         property_id=field.id).first()
+                    if textfield is not None:
+                        value = textfield.value
+                        if search_keyword is not "" and str(value).lower().find(str(search_keyword).lower()) > -1:
+                            search_match.append(value)
                 if field.type == 1:
-                    field_value = IntegerField.objects.filter(instance_id=instance.id).filter(
+                    integerfield = IntegerField.objects.filter(instance_id=instance.id).filter(
                         property_id=field.id).first()
+                    if integerfield is not None:
+                        value = integerfield.value
+                        if search_keyword is not "" and str(value).lower().find(str(search_keyword).lower()) > -1:
+                            search_match.append(value)
                 if field.type == 2:
-                    field_value = DateTimeField.objects.filter(instance_id=instance.id).filter(
+                    datetimefield = DateTimeField.objects.filter(instance_id=instance.id).filter(
                         property_id=field.id).first()
+                    if datetimefield is not None:
+                        value = datetimefield.value
+                        if search_keyword is not "" and str(value).lower().find(str(search_keyword).lower()) > -1:
+                            search_match.append(value)
+            if len(search_match) == len(search_keywords):
+                search_results.append(instance.id)
+            results = Instance.objects.filter(id__in=search_results).order_by('-created_on')
+        return results
 
-        return Instance.objects.filter(
-            datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('community_id'))).order_by(
-            '-created_on')
+    def get_success_url(self):
+        return reverse('datatype:index', kwargs={'community_id': self.kwargs.get('community_id')})
