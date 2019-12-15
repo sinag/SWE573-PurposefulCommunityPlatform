@@ -4,6 +4,10 @@ from django.views.generic.edit import CreateView, DeleteView
 from community.models import Community
 from .models import Subscription
 
+"""
+Class based view to create new subscription
+"""
+
 
 class CreateView(CreateView):
     model = Subscription
@@ -19,12 +23,20 @@ class CreateView(CreateView):
         return ctx
 
     def form_valid(self, form):
+        """
+        Assign subscription data
+        """
         form.instance.user = self.request.user
         form.instance.community = Community.objects.all().filter(id=self.kwargs.get('pk')).get()
         return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('community:index')
+
+
+"""
+Class based view to remove existing subscription
+"""
 
 
 class DeleteView(DeleteView):
@@ -37,6 +49,6 @@ class DeleteView(DeleteView):
 
     def get_queryset(self):
         """
-        Get community details to delete
+        Get subscription details to remove
         """
         return Subscription.objects.filter(id=self.kwargs.get('pk'))

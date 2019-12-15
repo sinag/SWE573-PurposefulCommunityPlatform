@@ -2,7 +2,9 @@ from django.db import models
 
 from root import settings
 
-
+"""
+Property object model
+"""
 class Property(models.Model):
     datatype = models.ForeignKey('datatype.DataType', on_delete=models.CASCADE, blank=False, null=False, db_index=True)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=settings.DEFAULT_ADMIN,

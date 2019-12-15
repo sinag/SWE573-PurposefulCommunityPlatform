@@ -8,12 +8,19 @@ from integerfield.models import IntegerField
 from textfield.models import TextField
 from .models import Instance
 
+"""
+Class based view to create new instance
+"""
+
 
 class CreateView(FormView):
     template_name = 'instance/create.html'
     form_class = DynamicPost
 
     def form_valid(self, form):
+        """
+        Assign instance data inside a transaction object
+        """
         with transaction.atomic():
             instance = Instance(datatype=DataType.objects.get(id=self.kwargs.get('datatype_id')),
                                 author=self.request.user)
@@ -50,11 +57,19 @@ class CreateView(FormView):
                        kwargs={'pk': DataType.objects.get(id=self.kwargs.get('datatype_id')).community.id})
 
 
+"""
+Class based view to delete existing instance
+"""
+
+
 class DeleteView(FormView):
     template_name = 'instance/delete.html'
     form_class = DynamicPost
 
     def form_valid(self, form):
+        """
+        Delete instance data inside a transaction object
+        """
         with transaction.atomic():
             instance = Instance.objects.get(id=self.kwargs.get('pk'))
             for field in DataType.objects.get(id=instance.datatype_id).fields():
@@ -75,11 +90,19 @@ class DeleteView(FormView):
                        kwargs={'pk': DataType.objects.get(id=self.kwargs.get('datatype_id')).community.id})
 
 
+"""
+Class based view to update existing instance
+"""
+
+
 class UpdateView(FormView):
     template_name = 'instance/update.html'
     form_class = DynamicPost
 
     def form_valid(self, form):
+        """
+        Update instance data inside a transaction object
+        """
         with transaction.atomic():
             instance = Instance.objects.get(id=self.kwargs.get('pk'))
 

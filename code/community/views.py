@@ -11,17 +11,29 @@ from property.models import Property
 from subscription.models import Subscription
 from .models import Community
 
+"""
+Class based index view to list communities
+"""
+
 
 class IndexView(generic.ListView):
     template_name = 'community/index.html'
     context_object_name = 'communities'
 
     def get_queryset(self):
+        """
+        Get community list sorted by creation date
+        """
         return Community.objects.order_by('-created_on')
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         return context
+
+
+"""
+Class based view to create new community
+"""
 
 
 class CreateView(CreateView):
@@ -30,6 +42,9 @@ class CreateView(CreateView):
     template_name = 'community/create.html'
 
     def form_valid(self, form):
+        """
+        Assign community data inside a transaction object
+        """
         with transaction.atomic():
             form.instance.author = self.request.user
             form.instance.save()
@@ -47,16 +62,25 @@ class CreateView(CreateView):
                                              type=0, generic=1, required=True)
             property_semantic_tag.save()
             return FormMixin.form_valid(self, form)
-            # return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('community:index')
+
+
+"""
+Custom signal to subscribe current user to new community
+"""
 
 
 @receiver(post_save, sender=Community)
 def create_initial_member(sender, instance, **kwargs):
     a = Subscription(user=instance.author, community=instance)
     a.save()
+
+
+"""
+Class based view to update existing community
+"""
 
 
 class UpdateView(UpdateView):
@@ -74,6 +98,11 @@ class UpdateView(UpdateView):
         return Community.objects.filter(id=self.kwargs.get('pk'))
 
 
+"""
+Class based view to delete existing community
+"""
+
+
 class DeleteView(DeleteView):
     model = Community
     template_name = 'community/delete.html'
@@ -88,6 +117,11 @@ class DeleteView(DeleteView):
         return Community.objects.filter(id=self.kwargs.get('pk'))
 
 
+"""
+Class based view to show instances inside community
+"""
+
+
 class PostsView(generic.ListView):
     model = Instance
     template_name = 'community/posts.html'
@@ -95,7 +129,7 @@ class PostsView(generic.ListView):
 
     def get_queryset(self):
         """
-        Get community details
+        Get instance details
         """
         return Instance.objects.filter(
             datatype_id__in=DataType.objects.all().filter(community_id=self.kwargs.get('pk'))).order_by('-created_on')
