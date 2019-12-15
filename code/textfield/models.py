@@ -3,6 +3,10 @@ from django.db import models
 from instance.models import Instance
 from property.models import Property
 
+"""
+TExt field object model
+"""
+
 
 class TextField(models.Model):
     value = models.CharField(max_length=255, blank=True, null=True)

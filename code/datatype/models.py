@@ -3,6 +3,10 @@ from community.models import Community
 from property.models import Property
 from root import settings
 
+"""
+Datatype object model
+"""
+
 
 class DataType(models.Model):
     community = models.ForeignKey(Community, on_delete=models.PROTECT, blank=False, null=False, db_index=True)
@@ -15,12 +19,19 @@ class DataType(models.Model):
         (0, 'Custom'),
         (1, 'Generic'),
     ]
-    generic = models.BooleanField(db_index=True, choices=generic_choices)  # False = Custom, True = Generic
+    """
+    For generic datatype generic = True
+    For custom datatype generic = False
+    """
+    generic = models.BooleanField(db_index=True, choices=generic_choices)
 
     def __str__(self):
         return str(str(self.id) + '-' + self.name)
 
     def fields(self):
+        """
+        Returns fields inside this datatype
+        """
         return Property.objects.all().filter(datatype=self.id)
 
     class Meta:

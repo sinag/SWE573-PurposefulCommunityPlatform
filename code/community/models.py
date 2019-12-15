@@ -2,6 +2,10 @@ from django.contrib.auth.models import User
 from django.db import models
 from root import settings
 
+"""
+Community object model
+"""
+
 
 class Community(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=settings.DEFAULT_ADMIN,
@@ -16,7 +20,3 @@ class Community(models.Model):
     class Meta:
         verbose_name = "community"
         verbose_name_plural = "communities"
-
-
-
-

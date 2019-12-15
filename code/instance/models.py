@@ -4,7 +4,9 @@ from datatype.models import DataType
 from property.models import Property
 from root import settings
 
-
+"""
+Instance object model
+"""
 class Instance(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=settings.DEFAULT_ADMIN,
                                blank=False, null=False, db_index=True)

@@ -3,6 +3,10 @@ from django.db import models
 from instance.models import Instance
 from property.models import Property
 
+"""
+Integer field object model
+"""
+
 
 class IntegerField(models.Model):
     value = models.BigIntegerField(blank=True, null=True)

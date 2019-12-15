@@ -13,24 +13,30 @@ from .forms import SearchForm
 from .models import DataType
 from community.models import Community
 
+"""
+Class based index view to list datatypes inside a community
+"""
+
 
 class IndexView(generic.ListView):
     template_name = 'datatype/index.html'
     context_object_name = 'datatypes'
 
     def get_queryset(self):
-        # user = self.request.user.id
         """
-        Return top communities by post count
+        Get datatype list from community sorted by creation date
         """
         return DataType.objects.all().filter(community__id=self.kwargs.get('community_id')).order_by(
             'generic').order_by('created_on')
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        # context['subscriptions'] = Hotel.objects.all().order_by('star').reverse()[:3]
-        # # Add any other variables to the context here
         return context
+
+
+"""
+Class based view to create new datatype
+"""
 
 
 class CreateView(CreateView):
@@ -39,6 +45,9 @@ class CreateView(CreateView):
     template_name = 'datatype/create.html'
 
     def form_valid(self, form):
+        """
+        Assign datatype data inside a transaction object
+        """
         with transaction.atomic():
             form.instance.author = self.request.user
             form.instance.generic = False
@@ -51,10 +60,14 @@ class CreateView(CreateView):
                                              type=0, generic=1, required=True)
             property_semantic_tag.save()
             return FormMixin.form_valid(self, form)
-            # return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('datatype:index', kwargs={'community_id': self.kwargs.get('community_id')})
+
+
+"""
+Class based view to delete existing datatype
+"""
 
 
 class DeleteView(DeleteView):
@@ -71,6 +84,11 @@ class DeleteView(DeleteView):
         return DataType.objects.filter(id=self.kwargs.get('pk'))
 
 
+"""
+Class based view to update existing datatype
+"""
+
+
 class UpdateView(UpdateView):
     model = DataType
     fields = ['name', 'description']
@@ -81,9 +99,14 @@ class UpdateView(UpdateView):
 
     def get_queryset(self):
         """
-        Get community details to delete
+        Get datatype details to update
         """
         return DataType.objects.filter(id=self.kwargs.get('pk'))
+
+
+"""
+Class based view to search using datatype
+"""
 
 
 class SearchView(FormView):
@@ -99,6 +122,11 @@ class SearchView(FormView):
                                                   'datatype_id': self.kwargs.get('datatype_id')})
 
 
+"""
+Class based view to show search results using datatype
+"""
+
+
 class ResultView(generic.ListView):
     model = Instance
     template_name = 'datatype/results.html'
@@ -107,6 +135,7 @@ class ResultView(generic.ListView):
     def get_queryset(self):
         """
         Get search results
+        Create a list for serach results, which contains instance_id's for results
         """
         search_results = []
         search_keywords = []

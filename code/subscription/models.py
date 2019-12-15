@@ -3,6 +3,10 @@ from django.db import models
 from community.models import Community
 from root import settings
 
+"""
+Subscription object model
+"""
+
 
 class Subscription(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, blank=False, null=False, db_index=True)
