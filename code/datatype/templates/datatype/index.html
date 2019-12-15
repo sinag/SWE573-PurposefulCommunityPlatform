@@ -17,9 +17,12 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ datatype.name }}</h5>
                                 <p class="card-text">{{ datatype.description }}</p>
-                                <a href="{% url 'property:index' datatype.id %}"
+                                <a href="{% url 'datatype:search' view.kwargs.community_id datatype.id %}"
                                    class="btn btn-primary"><span
-                                        class="fas fa-search"></span> View Properties</a>
+                                        class="fas fa-search"></span> Search</a>
+                            <a href="{% url 'property:index' datatype.id %}"
+                                   class="btn btn-primary"><span
+                                        class="fas fa-list"></span> View Properties</a>
                                 {% if user.is_authenticated %}
                                     {% if datatype.author == request.user %}
                                         {% if datatype.generic == False %}
