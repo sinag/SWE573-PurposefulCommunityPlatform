@@ -56,14 +56,25 @@
                         <div class="card-header text-white bg-secondary">
                             Oops, no community found!
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">There is nothing here</h5>
-                            <p class="card-text">Click plus icon below to create a new community</p>
-                            <a href="#" class="btn btn-primary"><span class="fas fa-plus"></span> New Community</a>
-                        </div>
-                        <div class="card-footer text-muted">
-                            Just now
-                        </div>
+                        {% if user.is_authenticated %}
+                            <div class="card-body">
+                                <h5 class="card-title">There is nothing here</h5>
+                                <p class="card-text">Click plus icon below to create a new community</p>
+                                <a href="{% url 'community:create' %}" class="btn btn-primary"><span
+                                        class="fas fa-plus"></span> New Community</a>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Just now
+                            </div>
+                        {% else %}
+                            <div class="card-body">
+                                <h5 class="card-title">There is nothing here</h5>
+                                <p class="card-text">Please login and create a new community</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Just now
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}
