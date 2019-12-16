@@ -24,7 +24,7 @@ SECRET_KEY = 'h4@*l_1ggfh$%d@h*8+0jqt#53803+jurdnwx5%bq95a8+gv#-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pcp-env.mvkkwvkkha.us-east-1.elasticbeanstalk.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['django-pcp.stwa93mwsa.us-east-1.elasticbeanstalk.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -160,8 +160,8 @@ LOGGING = {
 }
 
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL = 'communities'
-LOGOUT_REDIRECT_URL = 'communities'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 AUTH_USER_MODEL = 'users.CustomUser'

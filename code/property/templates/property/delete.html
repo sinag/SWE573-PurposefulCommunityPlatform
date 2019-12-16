@@ -10,7 +10,7 @@
             <div class="card-body">
                 <form class="form" role="form" autocomplete="off" id="delete_confirm_form" method="post">
                     {% csrf_token %}
-                    <p class="card-text">Are you sure you want to remove property "{{ property.name }}" from post type
+                    <p class="card-text">Are you sure you want to remove field "{{ property.name }}" from post type
                         "{{ view.kwargs.datatype_id|datatype_name }}"?</p>
                     {% if form.errors %}
                         {% for field in form %}

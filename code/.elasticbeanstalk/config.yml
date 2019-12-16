@@ -1,6 +1,6 @@
 branch-defaults:
   default:
-    environment: pcp-env
+    environment: django-pcp
     group_suffix: null
 environment-defaults:
   Pcp-env:
