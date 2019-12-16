@@ -140,24 +140,24 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static2')
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'filename': 'django.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file': {
+#             'level': 'ERROR',
+#             'class': 'logging.FileHandler',
+#             'filename': 'django.log',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file'],
+#             'level': 'ERROR',
+#             'propagate': True,
+#         },
+#     },
+# }
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'

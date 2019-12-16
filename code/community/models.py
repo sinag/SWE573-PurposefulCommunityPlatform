@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from root import settings
+from django.contrib.auth import get_user_model
 
 """
 Community object model
@@ -8,7 +9,7 @@ Community object model
 
 
 class Community(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=settings.DEFAULT_ADMIN,
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=get_user_model().objects.get(username="admin"),
                                blank=False, null=False, db_index=True)
     name = models.CharField(max_length=100, blank=False, null=False)
     created_on = models.DateTimeField(auto_now_add=True, blank=False, null=False)
