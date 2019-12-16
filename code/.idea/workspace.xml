@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0778f17-c949-4104-8f59-8791842e4777" name="Default Changelist" comment="owner save method added&#10;delete and edit functions are mapped to owner">
+      <change beforePath="$PROJECT_DIR$/.elasticbeanstalk/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.elasticbeanstalk/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datatype/templates/datatype/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/datatype/templates/datatype/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/property/templates/property/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/property/templates/property/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/root/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/root/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sent_emails/20191105-122034-84796496.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +174,7 @@
       <workItem from="1576325822506" duration="3287000" />
       <workItem from="1576329642408" duration="3231000" />
       <workItem from="1576397067282" duration="6874000" />
-      <workItem from="1576485761933" duration="3301000" />
+      <workItem from="1576485761933" duration="4929000" />
     </task>
     <task id="LOCAL-00001" summary="initial code commit">
       <created>1572191270472</created>

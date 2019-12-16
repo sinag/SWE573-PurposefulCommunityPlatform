@@ -24,7 +24,7 @@ SECRET_KEY = 'h4@*l_1ggfh$%d@h*8+0jqt#53803+jurdnwx5%bq95a8+gv#-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pcp-env.mvkkwvkkha.us-east-1.elasticbeanstalk.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['django-pcp.stwa93mwsa.us-east-1.elasticbeanstalk.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
