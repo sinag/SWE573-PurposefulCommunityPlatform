@@ -22,7 +22,7 @@
                                         class="fas fa-search"></span> Search</a>
                             <a href="{% url 'property:index' datatype.id %}"
                                    class="btn btn-primary"><span
-                                        class="fas fa-list"></span> View Properties</a>
+                                        class="fas fa-list"></span> View Fields</a>
                                 {% if user.is_authenticated %}
                                     {% if datatype.author == request.user %}
                                         {% if datatype.generic == False %}
