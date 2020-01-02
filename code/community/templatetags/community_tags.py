@@ -96,7 +96,7 @@ Get property value using instance_id, property_id and property_type from context
 
 @register.simple_tag
 def property_value(instance_id, property_id, property_type):
-    if property_type == 0 or property_type == 4 or property_type == 5 or property_type == 6 or property_type == 7 or property_type == 8:
+    if property_type == 0 or property_type == 4 or property_type == 5 or property_type == 6 or property_type == 7 or property_type == 8 or property_type == 9:
         result = TextField.objects.filter(instance_id=instance_id).filter(property_id=property_id).first()
         if result is not None:
             return result.value
@@ -141,9 +141,11 @@ def field_type_to_input_type(field_type):
     if field_type == 5:
         result = "url"
     if field_type == 6:
-        result = "image"
+        result = "url"
     if field_type == 7:
         result = "email"
     if field_type == 8:
         result = "url"
+    if field_type == 9:
+        result = "text"
     return result

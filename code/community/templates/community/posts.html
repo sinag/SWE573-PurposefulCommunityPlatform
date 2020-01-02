@@ -32,14 +32,44 @@
                                                     <div class="form-group">
                                                         {% if field.name != 'Semantic Tags' %}
                                                             <label for="id_{{ field.name }}">{{ field.name }}</label>
-                                                            <input type="{{ field.type|field_type_to_input_type }}"
-                                                                   class="form-control form-control-lg rounded"
-                                                                   name="{{ field.name }}"
-                                                                   id="id_{{ field.name }}"
-                                                                   value="{% property_value instance.id field.id field.type %}"
-                                                                   disabled>
+                                                            {% if field.type == 6 or field.type == 4 or field.type == 5 or field.type == 9 %}
+                                                                {% if field.type == 9 %}
+                                                                    <div class="form-group rounded mx-auto d-block card-img-top embed-responsive embed-responsive-16by9">
+                                                                    {% autoescape off %}
+                                                                        {% property_value instance.id field.id field.type %}
+                                                                    {% endautoescape %}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {% if field.type == 6 %}
+                                                                    <img src="{% property_value instance.id field.id field.type %}"
+                                                                         class="rounded mx-auto d-block card-img-top">
+                                                                {% endif %}
+                                                                {% if field.type == 4 %}
+                                                                    <video class="rounded mx-auto d-block card-img-top"
+                                                                           controls>
+                                                                        <source src="{% property_value instance.id field.id field.type %}"
+                                                                                type="video/mp4">
+                                                                    </video>
+                                                                {% endif %}
+                                                                {% if field.type == 5 %}
+                                                                    <audio class="rounded mx-auto d-block card-img-top"
+                                                                           controls>
+                                                                        <source src="{% property_value instance.id field.id field.type %}"
+                                                                                type="audio/ogg">
+                                                                    </audio>
+                                                                {% endif %}
+                                                            {% else %}
+                                                                <input type="{{ field.type|field_type_to_input_type }}"
+                                                                       class="form-control form-control-lg rounded"
+                                                                       name="{{ field.name }}"
+                                                                       id="id_{{ field.name }}"
+                                                                       value="{% property_value instance.id field.id field.type %}"
+                                                                       disabled>
+                                                            {% endif %}
                                                         {% else %}
-                                                            <label for="tags{{ instance.id }}{{ field.id }}">{{ field.name }}</label>
+                                                            <label for="tags
+
+                                                                    {{ instance.id }}{{ field.id }}">{{ field.name }}</label>
                                                             <select
                                                                     id="tags{{ instance.id }}{{ field.id }}"
                                                                     name="{{ field.name }}"

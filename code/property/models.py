@@ -21,6 +21,7 @@ class Property(models.Model):
         (6, 'Image'),
         (7, 'Email'),
         (8, 'URL'),
+        (9, 'Location'),
     ]
     generic_choices = [
         (0, 'Custom'),

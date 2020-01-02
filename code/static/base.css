@@ -31,3 +31,8 @@
 .select2-search--inline{
     margin-top: 5px !important;
 }
+
+.card-img-top{
+  max-width:100%;
+  max-height:100%;
+}

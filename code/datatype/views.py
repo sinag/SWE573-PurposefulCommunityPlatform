@@ -149,7 +149,7 @@ class ResultView(generic.ListView):
             search_match = []
             for field in DataType.objects.get(id=self.kwargs.get('datatype_id')).fields():
                 search_keyword = search_data[field.name]
-                if field.type == 0 or field.type == 4 or field.type == 5 or field.type == 6 or field.type == 7 or field.type == 8:
+                if field.type == 0 or field.type == 4 or field.type == 5 or field.type == 6 or field.type == 7 or field.type == 8 or field.type == 9:
                     textfield = TextField.objects.filter(instance_id=instance.id).filter(
                         property_id=field.id).first()
                     if textfield is not None:
